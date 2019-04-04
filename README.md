@@ -29,7 +29,7 @@ This repository contains solutions to original puzzles, community puzzles, conte
 ### Hard Puzzles
 * [Bender - Episode 2 in Python](selected-puzzles/hard/bender2)
 * [Roller Coaster in Python](selected-puzzles/hard/roller-coaster)
-* [Skynet Revolution - Episode 2 in Python](selected-puzzles/hard)
+* [Skynet Revolution - Episode 2 in Python](selected-puzzles/hard/skynet-revolution2)
 * [Super Computer in Python](selected-puzzles/hard/super-computer)
 * [Surface in Python](selected-puzzles/hard/surface)
 * [TAN Network in Python](selected-puzzles/hard/tan-network)
