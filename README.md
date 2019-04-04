@@ -17,10 +17,10 @@ This repository contains solutions to original puzzles, community puzzles, conte
 
 ### Medium Puzzles
 * [Bender - Episode 1 in Python](selected-puzzles/medium/bender1)
-* [Conway Sequence in Haskell](selected-puzzles/medium/)
+* [Conway Sequence in Haskell](selected-puzzles/medium/conway-sequence)
 * [The Last Crusade - Episode 1 in Python](selected-puzzles/medium/last-crusade)
-* [Mayan Calculation in Kotlin](selected-puzzles/medium/mayan-calculation)
-* [Scrabble in Python](selected-puzzles/medium/srabble)
+* [Mayan Calculation in Kotlin](selected-puzzles/medium/mayan-calc)
+* [Scrabble in Python](selected-puzzles/medium/scrabble)
 * [Shadows of the Knight - Episode 1 in Ruby](selected-puzzles/medium/shadows-knight1)
 * [Skynet Revolution - Episode 1 in Java](selected-puzzles/medium/skynet-revolution1)
 * [There is no Spoon - Episode 1 in Python](selected-puzzles/medium/there-is-no-spoon1)
