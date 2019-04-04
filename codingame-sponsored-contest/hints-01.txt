@@ -1,0 +1,5 @@
+This puzzle is a bit particular, in the sense that in order to solve it you must first understand what you're expected to do. This might be confusing at first, but that is intended.
+
+At each turn, you are given 4 characters followed by several lines each containing a pair of integers. These numbers represent the coordinates of the game characters, including yours.
+
+Find out what makes the game end and try to keep it running as long as possible.

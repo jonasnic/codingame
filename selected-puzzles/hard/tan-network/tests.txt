@@ -1,0 +1,6 @@
+example
+one-single-stop
+same-start-end
+several-stages
+large-nb-stages
+impossible
