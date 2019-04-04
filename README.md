@@ -37,7 +37,7 @@ This repository contains solutions to original puzzles, community puzzles, conte
 * [Vox Codei - Episode 1 in Python](selected-puzzles/hard/vox-codei1)
 
 ## Links
-[CodinGame Profile](https://www.codingame.com/profile/8111ec5700e5b6591daabfc46fd79e278747932)
+* [CodinGame Profile](https://www.codingame.com/profile/8111ec5700e5b6591daabfc46fd79e278747932)
 * [ethiery](https://ethiery.github.io/codingame/index.html)
 * [Adam Hill](http://dootrix.com/graph-theory-codingame-puzzlw-walkthrough-skynet-the-virus/)
 * [texus](https://github.com/texus/codingame)
