@@ -10,7 +10,7 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 | Title | Solution |
 | :---: | :-------: |
 | Onboarding | [Java](./puzzles/java/onboarding/Player.java) |
-| The Descent | [Python](./puzzles/python3/the_descent.py), [Java](./puzzles/java/the-descent/Player.java), [Kotlin](./puzzles/kotlin/src/the-descent.kt) &starf;, [TypeScript](./puzzles/ts/the-descent/the-descent.ts), [C++](./puzzles/cpp/the-descent.cpp) |
+| The Descent | [Python](./puzzles/python3/the_descent.py), [Java](./puzzles/java/the-descent/Player.java), [Kotlin](./puzzles/kotlin/src/the-descent) &starf;, [TypeScript](./puzzles/ts/the-descent/the-descent.ts), [C++](./puzzles/cpp/the-descent.cpp) |
 | Power of Thor - Episode 1 | [Python](./puzzles/python3/power-of-thor1) &starf;, [Kotlin](./puzzles/kotlin/src/power-of-thor1.kt), [JavaScript](./puzzles/js/power-of-thor1.js), [C++](./puzzles/cpp/power-of-thor1.cpp) |
 | Power of Thor - Episode 1 | [Python](./puzzles/python3/power-of-thor1) &starf;, [Kotlin](./puzzles/kotlin/src/power-of-thor1.kt), [JavaScript](./puzzles/js/power-of-thor1.js), [C++](./puzzles/cpp/power-of-thor1.cpp) |
 | Temperatures | [Python](./puzzles/python3/temperatures) &starf;, [Kotlin](./puzzles/kotlin/src/temperatures.kt), [JavaScript](./puzzles/js/temperatures.js), [C++](./puzzles/cpp/temperatures.cpp) |
