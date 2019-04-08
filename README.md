@@ -56,6 +56,9 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 | Bender - Episode 2 | [Python](./puzzles/python3/bender2) |
 | Bender - Episode 3 | [Python](./puzzles/python3/bender3.py) |
 
+### Very Hard Puzzles
+| The Last Crusade - Episode 3 | [Java](./puzzles/java/last-crusade3/src/Player.java) |
+
 There are solutions available for other puzzles and in other programming languages as well in this repository.
 
 ## Links
