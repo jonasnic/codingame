@@ -2,7 +2,7 @@
 
 This repository contains solutions to CodinGame puzzles, contests and Clash of Code.
 
-Note: A "&starf;" next to the solution means this is my personal favorite solution.
+Note: A "&starf;" next to the solution means this is my personal favorite solution, which also includes an explanation.
 
 ## Puzzles
 
