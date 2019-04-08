@@ -18,7 +18,7 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 | Chuck Norris | [Python](./puzzles/python3/chuck_norris.py), [Kotlin](./puzzles/kotlin/src/chuck-norris.kt), [TypeScript](./puzzles/ts/chuck-norris) &starf;, [C++](./puzzles/cpp/chuck-norris.cpp) |
 | MIME Type | [Python](./puzzles/python3/mime_type.py), [Kotlin](./puzzles/kotlin/src/mime-type.kt), [TypeScript](./puzzles/ts/mime-type) &starf; |
 | Defibrillators | [Python](./puzzles/python3/defibrillators.py), [Kotlin](./puzzles/kotlin/src/defibrillators) &starf;, [JavaScript](./puzzles/js/defibrillators.js) |
-| Horse-racing Duals | [Python](./puzzles/python3/horse_racing_duals.py), [Kotlin](./puzzles/kotlin/src/horse-racing-duals.kt) &starf;, [JavaScript](./puzzles/js/horse-racing-duals.js), [Ruby](./puzzles/ruby/horse-racing-duals) &starf; |
+| Horse-racing Duals | [Python](./puzzles/python3/horse_racing_duals.py), [Kotlin](./puzzles/kotlin/src/horse-racing-duals.kt), [JavaScript](./puzzles/js/horse-racing-duals.js), [Ruby](./puzzles/ruby/horse-racing-duals) &starf; |
 
 ## Links
 * [My CodinGame Profile](https://www.codingame.com/profile/8111ec5700e5b6591daabfc46fd79e278747932)
