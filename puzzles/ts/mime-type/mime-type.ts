@@ -1,5 +1,5 @@
-const nbElements = Number(readline()); // Number of elements which make up the association table.
-const nbNames = Number(readline()); // Number of file names to be analyzed.
+const nbElements: number = Number(readline()); // Number of elements which make up the association table.
+const nbNames: number = Number(readline()); // Number of file names to be analyzed.
 let table: object = {} // object to map file extensions to mime types
 for (let i: number = 0; i < nbElements; i++) {
   const [extension, mimeType]: [string, string] = readline().split(' ');
