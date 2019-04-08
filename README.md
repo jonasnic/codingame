@@ -39,6 +39,23 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 | The Gift | [Python](./puzzles/python3/the_gift.py) |
 | Mayan Calculation | [Python](./puzzles/python3/mayan_calc.py), [Kotlin](./puzzles/kotlin/src/mayan-calc) &starf; |
 
+### Hard Puzzles
+| Title | Solution |
+| :---: | :-------: |
+| The Labyrinth | [Python](./puzzles/python3/the-labyrinth) |
+| Skynet Revolution - Episode 2 | [Python](./puzzles/python3/skynet-revolution2) |
+| The Bridge | [Java](./puzzles/java/skynet-the-bridge/src/Player.java) |
+| Vox Codei - Episode 1 | [Python](./puzzles/python3/vox-codei1) |
+| Super Computer | [Python](./puzzles/python3/super-computer) |
+| Roller Coaster | [Python](./puzzles/python3/roller-coaster) |
+| Surface | [Python](./puzzles/python3/surface) |
+| CGX Formatter | [Python](./puzzles/python3/cgx_formatter.py) |
+| The Last Crusade - Episode 2 | [Java](./puzzles/java/last-crusade2/src/Player.java) |
+| TAN Network | [Python](./puzzles/python3/tan-network) |
+| Genome Sequencing | [Python](./puzzles/python3/genome_sequencing.py) |
+| Bender - Episode 2 | [Python](./puzzles/python3/bender2) |
+| Bender - Episode 3 | [Python](./puzzles/python3/bender3.py) |
+
 There are solutions available for other puzzles and in other programming languages as well in this repository.
 
 ## Links
