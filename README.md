@@ -10,6 +10,7 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 | :---: | :-------: | :-------: |
 | Onboarding | [Java](./puzzles/java/onboarding/Player.java) | Easy |
 | The Descent | [Python](./puzzles/python3/the_descent.py), [Java](./puzzles/java//the-descent/Player.java), [Kotlin](./puzzles/kotlin/src/the-descent) &starf;, [TypeScript](./puzzles/ts/the-descent/the-descent.ts), [C++](./puzzles/cpp/the-descent.cpp) | Easy |
+| Example | [Python](./puzzles/python3/.py), [Kotlin](./puzzles/kotlin/src/), [JavaScript](./puzzles/js/), [C++](./puzzles/cpp/the-descent.cpp) | Easy |
 
 ## Links
 * [My CodinGame Profile](https://www.codingame.com/profile/8111ec5700e5b6591daabfc46fd79e278747932)
