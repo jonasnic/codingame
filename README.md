@@ -35,7 +35,7 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 | Telephone Numbers | [Python](./puzzles/python3/telephone_numbers.py) |
 | Dwarfs standing on the shoulders of giants | [Python](./puzzles/python3/dwarfs_giants.py) |
 | Bender - Episode 1 | [Python](./puzzles/python3/bender1), [Kotlin](./puzzles/kotlin/src/bender1.kt) |
-| Scrabble | [Python](./puzzles/python3/scrabble) &starf;, [Kotlin](./puzzles/kotlin/src/scrabble.kt) &starf;, [JavaScript](./puzzles/js/scrabble.js) |
+| Scrabble | [Python](./puzzles/python3/scrabble) &starf;, [Kotlin](./puzzles/kotlin/src/scrabble.kt), [JavaScript](./puzzles/js/scrabble.js) |
 | The Gift | [Python](./puzzles/python3/the_gift.py) |
 | Mayan Calculation | [Python](./puzzles/python3/mayan_calc.py), [Kotlin](./puzzles/kotlin/src/mayan-calc) &starf; |
 
