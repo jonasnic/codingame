@@ -24,7 +24,7 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 | Title | Solution |
 | :---: | :-------: |
 | Shadows of the Knight - Episode 1 | [Python](./puzzles/python3/shadows_knight1.py), [Kotlin](./puzzles/kotlin/src/shadows-knight1.kt), [JavaScript](./puzzles/js/shadows-knight1.js), [C++](./puzzles/cpp/shadows-knight1.cpp), [Ruby](./puzzles/ruby/shadows-knight1) &starf; |
-| There is no Spoon - Episode 1 | [Python](./puzzles/python3/there_is_no_spoon1) &starf;, [Kotlin](./puzzles/kotlin/src/there-is-no-spoon1.kt), [JavaScript](./puzzles/js/there-is-no-spoon1.js), [C++](./puzzles/cpp/there-is-no-spoon1.cpp) |
+| There is no Spoon - Episode 1 | [Python](./puzzles/python3/there-is-no-spoon1) &starf;, [Kotlin](./puzzles/kotlin/src/there-is-no-spoon1.kt), [JavaScript](./puzzles/js/there-is-no-spoon1.js), [C++](./puzzles/cpp/there-is-no-spoon1.cpp) |
 | Skynet Revolution - Episode 1 | [Python](./puzzles/python3/skynet_revolution1.py), [Java](./puzzles/java/src/skynet-revolution1) &starf;, [JavaScript](./puzzles/js/skynet-revolution1.js), [C++](./puzzles/cpp/skynet-revolution1.cpp) |
 | Don't Panic - Episode 1 | [Python](./puzzles/python3/dont_panic1.py) |
 | War | [Python](./puzzles/python3/war.py), [Kotlin](./puzzles/kotlin/src/war) &starf;, [JavaScript](./puzzles/js/war.js), [C++](./puzzles/cpp/war.cpp) |
