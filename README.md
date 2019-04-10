@@ -28,8 +28,8 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 | Skynet Revolution - Episode 1 | [Python](./puzzles/python3/skynet_revolution1.py), [Java](./puzzles/java/skynet-revolution1) &starf;, [JavaScript](./puzzles/js/skynet-revolution1.js), [C++](./puzzles/cpp/skynet-revolution1.cpp) |
 | Don't Panic - Episode 1 | [Python](./puzzles/python3/dont_panic1.py) |
 | War | [Python](./puzzles/python3/war.py), [Kotlin](./puzzles/kotlin/src/war) &starf;, [JavaScript](./puzzles/js/war.js), [C++](./puzzles/cpp/war.cpp) |
-| Stock Exchange Losses | [Python](./puzzles/python3/stock_exchange.py) |
-| The Last Crusade - Episode 1 | [Python](./puzzles/python3/last-crusade1) &starf;, [Kotlin](./puzzles/kotlin/src/last-crusade1.kt), [JavaScript](./puzzles/js/last-crusade1.js), [C++](./puzzles/cpp/last-crusade1.cpp) |
+| Stock Exchange Losses | [TypeScript](./puzzles/ts/stock-exchange/stock-exchange.ts) |
+| The Last Crusade - Episode 1 | [Python](./puzzles/python3/last_crusade1.py) , [Kotlin](./puzzles/kotlin/src/last-crusade1.kt), [JavaScript](./puzzles/js/last-crusade1) &starf;, [C++](./puzzles/cpp/last-crusade1.cpp) |
 | Network Cabling | [Python](./puzzles/python3/network_cabling.py) |
 | Conway Sequence | [Python](./puzzles/python3/conway_sequence.py), [Kotlin](./puzzles/kotlin/src/conway-sequence.kt) &starf;, [JavaScript](./puzzles/js/conway-sequence.js), [Haskell](./puzzles/haskell/conway-sequence) &starf; |
 | Telephone Numbers | [Python](./puzzles/python3/telephone_numbers.py) |
