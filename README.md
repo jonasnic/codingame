@@ -4,6 +4,8 @@ This repository contains solutions to CodinGame puzzles, contests and Clash of C
 
 Note: A "&starf;" next to the solution means this is my personal favorite solution.
 
+![Hits](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fgithub.com%2Fcharlesfranciscodev%2Fcodingame)
+
 ## Puzzles
 
 ### Easy Puzzles
