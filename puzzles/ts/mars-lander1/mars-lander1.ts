@@ -1,6 +1,6 @@
 const surfaceN: number = parseInt(readline()); // the number of points used to draw the surface of Mars.
 for (let i = 0; i < surfaceN; i++) {
-  const inputs: string[] = readline().split(' ');
+  readline().split(' ');
 }
 
 // game loop
