@@ -31,7 +31,7 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 | Stock Exchange Losses | [TypeScript](./puzzles/ts/stock-exchange/stock-exchange.ts) |
 | The Last Crusade - Episode 1 | [Python](./puzzles/python3/last_crusade1.py) , [Kotlin](./puzzles/kotlin/src/last-crusade1.kt), [JavaScript](./puzzles/js/last-crusade1) &starf;, [C++](./puzzles/cpp/last-crusade1.cpp) |
 | Network Cabling | [Python](./puzzles/python3/network_cabling.py) |
-| Conway Sequence | [Python](./puzzles/python3/conway_sequence.py), [Kotlin](./puzzles/kotlin/src/conway-sequence.kt) &starf;, [JavaScript](./puzzles/js/conway-sequence.js), [Haskell](./puzzles/haskell/conway-sequence) &starf; |
+| Conway Sequence | [Python](./puzzles/python3/conway_sequence.py), [Kotlin](./puzzles/kotlin/src/conway-sequence.kt), [JavaScript](./puzzles/js/conway-sequence.js), [Haskell](./puzzles/haskell/conway-sequence) &starf; |
 | Telephone Numbers | [Python](./puzzles/python3/telephone_numbers.py) |
 | Dwarfs standing on the shoulders of giants | [Python](./puzzles/python3/dwarfs_giants.py) |
 | Bender - Episode 1 | [Python](./puzzles/python3/bender1), [Kotlin](./puzzles/kotlin/src/bender1.kt) |
