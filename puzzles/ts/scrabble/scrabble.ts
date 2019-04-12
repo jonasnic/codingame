@@ -1,15 +1,15 @@
 function points(letter: string) {
-  if ("dg".indexOf(letter) != -1) {
+  if ("dg".indexOf(letter) !== -1) {
     return 2;
-  } else if ("bcmp".indexOf(letter) != -1) {
+  } else if ("bcmp".indexOf(letter) !== -1) {
     return 3;
-  } else if ("fhvwy".indexOf(letter) != -1) {
+  } else if ("fhvwy".indexOf(letter) !== -1) {
     return 4;
-  } else if ("k".indexOf(letter) != -1) {
+  } else if ("k".indexOf(letter) !== -1) {
     return 5;
-  } else if ("jx".indexOf(letter) != -1) {
+  } else if ("jx".indexOf(letter) !== -1) {
     return 8;
-  } else if ("qz".indexOf(letter) != -1) {
+  } else if ("qz".indexOf(letter) !== -1) {
     return 10;
   } else {
     return 1;
@@ -19,7 +19,7 @@ function points(letter: string) {
 function isValidWord(word: string, lettersArray: string[]): boolean {
   for (let c of word) {
     let index: number = lettersArray.indexOf(c);
-    if (index == -1) {
+    if (index === -1) {
       return false;
     } else {
       lettersArray.splice(index, 1);

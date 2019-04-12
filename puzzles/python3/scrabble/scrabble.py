@@ -1,4 +1,4 @@
-scores = {
+POINTS = {
     'e': 1, 'a': 1, 'i': 1, 'o': 1, 'n': 1,
     'r': 1, 't': 1, 'l': 1, 's': 1, 'u': 1,
     'd': 2, 'g': 2,
@@ -9,32 +9,39 @@ scores = {
     'q': 10, 'z': 10
 }
 
-best_word = ""
-high_score = 0
+
+def is_valid_word(word, letters):
+    for c in word: 
+        if c not in letters:
+            return False
+        else:
+            letters.remove(c)
+    return True
+
+
+def score(word):
+    total = 0
+    for c in word:
+        total += POINTS[c]
+    return total
+
+
+# read game input
 words = []
 nb_words = int(input())
 for i in range(nb_words):
     words.append(input())
 letters = input()
 
+# compute solution
+best_score = 0
+best_word = ""
 for word in words:
-    letters2 = list(letters)
-    is_valid = True
-    current_score = 0
-
-    # calculate the total score for one word
-    for char in word:
-        try:
-            index = letters2.index(char)
-        except ValueError:
-            is_valid = False
-            break
-        else:
-            del letters2[index]
-            current_score += scores[char]
-
-    if is_valid and current_score > high_score:
-        high_score = current_score
-        best_word = word
+    lettersCopy = list(letters)
+    if is_valid_word(word, lettersCopy):
+        current_score = score(word)
+        if current_score > best_score:
+            best_score = current_score
+            best_word = word
 
 print(best_word)
