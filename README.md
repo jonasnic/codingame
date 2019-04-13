@@ -19,7 +19,7 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 | ASCII Art | [Python](./puzzles/python3/ascii-art) &starf;, [Kotlin](./puzzles/kotlin/src/ascii-art.kt), [JavaScript](./puzzles/js/ascii-art.js), [TypeScript](./puzzles/ts/ascii-art/ascii-art.ts) [C++](./puzzles/cpp/ascii-art.cpp) |
 | Chuck Norris | [Python](./puzzles/python3/chuck_norris.py), [Kotlin](./puzzles/kotlin/src/chuck-norris.kt), [TypeScript](./puzzles/ts/chuck-norris) &starf;, [C++](./puzzles/cpp/chuck-norris.cpp) |
 | MIME Type | [Python](./puzzles/python3/mime_type.py), [Kotlin](./puzzles/kotlin/src/mime-type.kt), [TypeScript](./puzzles/ts/mime-type) &starf; |
-| Defibrillators | [Python](./puzzles/python3/defibrillators.py), [Kotlin](./puzzles/kotlin/src/defibrillators) &starf;, [JavaScript](./puzzles/js/defibrillators.js), [TypeScript](./puzzles/ts/defibrillators/defibrillators.ts) |
+| Defibrillators | [Python](./puzzles/python3/defibrillators) &starf;, [Kotlin](./puzzles/kotlin/src/defibrillators.kt), [JavaScript](./puzzles/js/defibrillators.js), [TypeScript](./puzzles/ts/defibrillators/defibrillators.ts) |
 | Horse-racing Duals | [Python](./puzzles/python3/horse_racing_duals.py), [Kotlin](./puzzles/kotlin/src/horse-racing-duals.kt), [JavaScript](./puzzles/js/horse-racing-duals.js), [TypeScript](./puzzles/ts/horse-racing-duals/horse-racing-duals.ts), [Ruby](./puzzles/ruby/horse-racing-duals) &starf; |
 
 ### Medium Puzzles
@@ -32,7 +32,7 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 | War | [Python](./puzzles/python3/war.py), [Kotlin](./puzzles/kotlin/src/war) &starf;, [JavaScript](./puzzles/js/war.js), [C++](./puzzles/cpp/war.cpp) |
 | Stock Exchange Losses | [TypeScript](./puzzles/ts/stock-exchange/stock-exchange.ts) |
 | The Last Crusade - Episode 1 | [Python](./puzzles/python3/last_crusade1.py) , [Kotlin](./puzzles/kotlin/src/last-crusade1.kt), [JavaScript](./puzzles/js/last-crusade1) &starf;, [TypeScript](./puzzles/ts/last-crusade1/last-crusade1.ts), [C++](./puzzles/cpp/last-crusade1.cpp) |
-| Network Cabling | [Python](./puzzles/python3/network_cabling.py) |
+| Network Cabling | [TypeScript](./puzzles/ts/network-cabling/network-cabling.ts) |
 | Conway Sequence | [Python](./puzzles/python3/conway_sequence.py), [Kotlin](./puzzles/kotlin/src/conway-sequence.kt), [JavaScript](./puzzles/js/conway-sequence.js), [Haskell](./puzzles/haskell/conway-sequence) &starf; |
 | Telephone Numbers | [Python](./puzzles/python3/telephone_numbers.py) |
 | Dwarfs standing on the shoulders of giants | [Python](./puzzles/python3/dwarfs_giants.py) |
