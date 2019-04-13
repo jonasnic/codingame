@@ -16,7 +16,6 @@ def read_num
     num_numeral += "#{gets.chomp}\n"
     if (i % @width) == (@width - 1) # if this is the last line
       num_array.push(@mayan_hash.fetch(num_numeral))
-      STDERR.puts(num_numeral)
       num_numeral = "" # Reset
     end
   end
@@ -75,11 +74,9 @@ for i in 0..(BASE - 1) do
 end
 
 # Read the first and second number
-STDERR.puts("First number:")
 num1_array = read_num
 num1 = convert_base_20_to_10(num1_array)
 
-STDERR.puts("Second number:")
 num2_array = read_num
 num2 = convert_base_20_to_10(num2_array)
 
@@ -99,13 +96,9 @@ result = case operation
              0
          end
 
-STDERR.print("#{num1} #{operation} #{num2} = #{result}\n")
-
 # Convert the result back to the original base
 digits = convert_base_10_to_20(result)
-STDERR.puts("Result in base 20:")
 digits.each do |digit|
-  STDERR.print"#{digit}\n"
   # Convert the digit to a mayan numeral
   mayan_numeral = @mayan_hash.key(digit)
   print mayan_numeral
