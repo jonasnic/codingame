@@ -46,7 +46,6 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 | :---: | :-------: |
 | The Labyrinth | [Python](./puzzles/python3/the-labyrinth) |
 | Skynet Revolution - Episode 2 | [Python](./puzzles/python3/skynet-revolution2) |
-| The Bridge | [Java](./puzzles/java/skynet-the-bridge/src/Player.java) |
 | Vox Codei - Episode 1 | [Python](./puzzles/python3/vox-codei1) |
 | Super Computer | [Python](./puzzles/python3/super-computer) |
 | Roller Coaster | [Python](./puzzles/python3/roller-coaster) |
