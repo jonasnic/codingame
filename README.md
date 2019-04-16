@@ -29,7 +29,7 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 | There is no Spoon - Episode 1 | [Python](./puzzles/python3/there-is-no-spoon1) &starf;, [Kotlin](./puzzles/kotlin/src/there-is-no-spoon1.kt), [JavaScript](./puzzles/js/there-is-no-spoon1.js), [TypeScript](./puzzles/ts/there-is-no-spoon1/there-is-no-spoon1.ts), [C++](./puzzles/cpp/there-is-no-spoon1.cpp) |
 | Skynet Revolution - Episode 1 | [Python](./puzzles/python3/skynet-revolution1) &starf;, [Java](./puzzles/java/skynet-revolution1), [JavaScript](./puzzles/js/skynet-revolution1.js), [TypeScript](./puzzles/ts/skynet-revolution1/skynet-revolution1.ts). [C++](./puzzles/cpp/skynet-revolution1.cpp) |
 | Don't Panic - Episode 1 | [Python](./puzzles/python3/dont_panic1.py) &starf;, [Kotlin](./puzzles/kotlin/src/dont-panic1.kt), [TypeScript](./puzzles/ts/dont-panic1/dont-panic1.ts) |
-| War | [Python](./puzzles/python3/war.py), [Kotlin](./puzzles/kotlin/src/war) &starf;, [JavaScript](./puzzles/js/war.js), [C++](./puzzles/cpp/war.cpp) |
+| War | [Python](./puzzles/python3/war) &starf;, [Kotlin](./puzzles/kotlin/src/war.kt), [TypeScript](./puzzles/ts/war/war.ts), [C++](./puzzles/cpp/war.cpp) |
 | Stock Exchange Losses | [TypeScript](./puzzles/ts/stock-exchange/stock-exchange.ts) |
 | The Last Crusade - Episode 1 | [Python](./puzzles/python3/last_crusade1.py) , [Kotlin](./puzzles/kotlin/src/last-crusade1.kt), [JavaScript](./puzzles/js/last-crusade1) &starf;, [TypeScript](./puzzles/ts/last-crusade1/last-crusade1.ts), [C++](./puzzles/cpp/last-crusade1.cpp) |
 | Network Cabling | [TypeScript](./puzzles/ts/network-cabling/network-cabling.ts) |
