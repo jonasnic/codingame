@@ -1,10 +1,9 @@
 # the number of temperatures to analyse
 n = int(input())
-min_t = 5526
+min_temperature = 5526
 for i in input().split():
-    # t: a temperature expressed as an integer ranging from -273 to 5526
-    t = int(i)
-    if abs(t) < abs(min_t) or abs(t) == abs(min_t) and t > min_t:
-        min_t = t
+    temperature = int(i)
+    if abs(temperature) < abs(min_temperature) or abs(temperature) == abs(min_temperature) and temperature > min_temperature:
+        min_temperature = temperature
 
-print(0 if n == 0 else min_t)
+print(0 if n == 0 else min_temperature)
