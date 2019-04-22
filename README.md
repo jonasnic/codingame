@@ -46,8 +46,8 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 | The Labyrinth | [Python](./puzzles/python3/the-labyrinth) |
 | Skynet Revolution - Episode 2 | [Python](./puzzles/python3/skynet-revolution2) |
 | Vox Codei - Episode 1 | [Python](./puzzles/python3/vox-codei1) |
-| Super Computer | [Python](./puzzles/python3/super-computer) |
-| Roller Coaster | [Python](./puzzles/python3/roller-coaster) |
+| Super Computer | [Python](./puzzles/python3/super-computer) &starf; |
+| Roller Coaster | [Python](./puzzles/python3/roller-coaster) &starf; |
 | Surface | [Python](./puzzles/python3/surface) |
 | CGX Formatter | [Python](./puzzles/python3/cgx_formatter.py) |
 | The Last Crusade - Episode 2 | [Java](./puzzles/java/last-crusade2/src/Player.java) |
