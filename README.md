@@ -51,7 +51,7 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 | Surface | [Python](./puzzles/python3/surface) |
 | CGX Formatter | [Python](./puzzles/python3/cgx_formatter.py) |
 | The Last Crusade - Episode 2 | [Java](./puzzles/java/last-crusade2/src/Player.java) |
-| TAN Network | [Python](./puzzles/python3/tan-network) |
+| TAN Network | [Python](./puzzles/python3/tan-network) &starf; |
 | Genome Sequencing | [Python](./puzzles/python3/genome_sequencing.py) |
 | Bender - Episode 2 | [Python](./puzzles/python3/bender2) |
 | Bender - Episode 3 | [Python](./puzzles/python3/bender3.py) |
