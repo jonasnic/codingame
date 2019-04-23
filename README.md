@@ -43,7 +43,7 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 ### Hard Puzzles
 | Title | Solution |
 | :---: | :-------: |
-| The Labyrinth | [Python](./puzzles/python3/the-labyrinth) |
+| The Labyrinth | [Python](./puzzles/python3/the-labyrinth) &starf; |
 | Skynet Revolution - Episode 2 | [Python](./puzzles/python3/skynet-revolution2) |
 | Vox Codei - Episode 1 | [Python](./puzzles/python3/vox-codei1) |
 | Super Computer | [Python](./puzzles/python3/super-computer) &starf; |
