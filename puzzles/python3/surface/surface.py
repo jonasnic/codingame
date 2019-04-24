@@ -1,5 +1,6 @@
 from collections import deque
 
+
 LAND = '#'
 WATER = 'O'
 DEFAULT_INDEX = -1
@@ -11,9 +12,6 @@ class Node:
         self.y = y
         self.terrain = terrain
         self.lake_index = DEFAULT_INDEX
-
-    def __repr__(self):
-        return self.terrain
 
 
 class Grid:
@@ -30,8 +28,8 @@ class Grid:
 
     def test(self):
         nb_coordinates = int(input())
-        for i in range(nb_coordinates):
-            x, y = [int(j) for j in input().split()]
+        for _ in range(nb_coordinates):
+            x, y = map(int, input().split())
             print(self.area(x, y))
 
     def area(self, x, y):
@@ -42,7 +40,6 @@ class Grid:
             self.flood_fill(node)
         return self.lakes[node.lake_index]
 
-    # Source https://en.wikipedia.org/wiki/Flood_fill
     def flood_fill(self, start):
         queue = deque()
         total_area = 0

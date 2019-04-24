@@ -1,30 +1,39 @@
-import sys
 import itertools
 
-n = int(input())
-subsequences = []
-for i in range(n):
-    subsequences.append(input())
 
-permutations = list(itertools.permutations(subsequences))
+def read_game_input():
+    subsequences = []
+    n = int(input())
+    for _ in range(n):
+        subsequences.append(input())
+    return subsequences
 
-min_length = 60
-for permutation in permutations:
-    sequence = permutation[0]
-    for i in range(1, len(permutation)):
-        j = 0
-        while (j < len(sequence)):
-            # if subseq is contained within the sequence
-            if (sequence.find(permutation[i]) != -1):
-                break
-            # if there is a partial match
-            end_index = len(sequence) - j
-            if (sequence[j:] == permutation[i][:end_index]):
-                sequence += permutation[i][end_index:]
-            j += 1
-        # if there is no match
-        if (j == len(sequence)):
-            sequence += permutation[i]
-    min_length = min(min_length, len(sequence))
 
-print(min_length)
+def compute_min_subseq_length(subsequences):
+    permutations = list(itertools.permutations(subsequences))
+    min_length = 60
+    for permutation in permutations:
+        sequence = permutation[0]
+        for i in range(1, len(permutation)):
+            j = 0
+            while (j < len(sequence)):
+                subsequence = permutation[i]
+                # check if the subsequence is contained within the sequence
+                if (sequence.find(subsequence) != -1):
+                    break
+                # check if there is a partial match
+                end_index = len(sequence) - j
+                if (sequence[j:] == subsequence[:end_index]):
+                    sequence += subsequence[end_index:]
+                j += 1
+            # check if there is no match
+            if (j == len(sequence)):
+                sequence += subsequence
+        min_length = min(min_length, len(sequence))
+    return min_length
+
+
+if __name__ == "__main__":
+    subsequences = read_game_input()
+    min_length = compute_min_subseq_length(subsequences)
+    print(min_length)
