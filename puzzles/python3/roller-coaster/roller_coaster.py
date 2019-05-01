@@ -1,34 +1,31 @@
-nb_places, nb_rides, nb_groups = [int(i) for i in input().split()]
+# read game input
 groups = []
+nb_places, nb_rides, nb_groups = map(int, input().split())
 for i in range(nb_groups):
-    nb_people = int(input())
-    groups.append(nb_people)
+    group_size = int(input())
+    groups.append(group_size)
 
-# Calculate earnings starting from each group (1 ride)
-# Save the result (dynamic programming)
+# cache the results starting to fill the ride from each of the groups
 results = []
 for i in range(nb_groups):
-    index = i
-    nb_people = groups[index]
-    nb_people_riding = 0
-    while nb_people_riding + nb_people <= nb_places:
-        nb_people_riding += nb_people
-        if index < nb_groups - 1:
-            index += 1
-        else:
-            index = 0
-        # all groups are riding already?
-        if index == i:
+    group_index = i
+    nb_places_left = nb_places
+    while nb_places_left >= groups[group_index]:
+        nb_places_left -= groups[group_index]
+        group_index += 1
+        if group_index == nb_groups:
+            group_index = 0
+        if group_index == i:
             break
-        nb_people = groups[index]
-    results.append((nb_people_riding, index))
+    money = nb_places - nb_places_left
+    results.append((money, group_index))
 
-# Calculate the total earnings starting from the first group (all rides)
+# calculate the total money earned during the day
 total_money = 0
-current_group = 0
-for i in range(nb_rides):
-    money, next_group = results[current_group]
+group_index = 0
+for _ in range(nb_rides):
+    money, next_group_index = results[group_index]
     total_money += money
-    current_group = next_group
+    group_index = next_group_index
 
 print(total_money)

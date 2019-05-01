@@ -1,128 +1,121 @@
-import sys
 from collections import deque
 
+
+# Kirk's Possible Moves
+UP = "UP"
+DOWN = "DOWN"
+LEFT = "LEFT"
+RIGHT = "RIGHT"
+
+# Possible ASCII Maze Characters
 WALL = '#'
-BEGINNING = 'T'
+EMPTY = '.'
+START = 'T'
 CONTROL_ROOM = 'C'
 UNKNOWN = '?'
 
 
-class Maze:
-    def __init__(self):
-        self.grid = []
-        self.nb_rows = 0
-        self.nb_columns = 0
-        self.kirk = (0, 0)  # (x, y)
-        self.start = (0, 0)
-        self.control_room = (0, 0)
-        self.explore = True
+class Game:
+    def __init__(self, height, width):
+        self.maze_explored = False
         self.control_room_reached = False
+        self.height = height
+        self.width = width
+        self.maze = []
+        self.kirk_position = (0, 0)  # (x, y)
 
-    def read_init_input(self):
-        self.nb_rows, self.nb_columns, rounds = map(int, input().split())
-        for y in range(self.nb_rows):
-            row = []
-            for x in range(self.nb_columns):
-                row.append(UNKNOWN)
-            self.grid.append(row)
-
-    def game_loop(self):
+    def loop(self):
         while True:
-            self.kirk = tuple(map(int, reversed(input().split())))
-            self.update_grid()
+            kirk_y, kirk_x = map(int, input().split())
+            self.kirk_position = (kirk_x, kirk_y)
+            self.maze = []
+            for y in range(height):
+                row = input()
+                self.maze.append(row)
+                for x, c in enumerate(row):
+                    if c == CONTROL_ROOM and (x, y) == self.kirk_position:
+                        self.control_room_reached = True
+            self.play()
 
-            if self.kirk == self.control_room:
-                self.control_room_reached = True
-
-            if self.explore:
-                # explore the maze
-                # until every unknown position is discovered
-                result = self.search(self.kirk, UNKNOWN)
-                if result is None:
-                    self.explore = False
-                    self.go_somewhere()
-                else:
-                    self.print_next_move(result)
+    def play(self):
+        came_from, neighbor = None, None
+        if not self.maze_explored:
+            to_avoid = [WALL, CONTROL_ROOM]
+            came_from, neighbor = self.bfs(UNKNOWN, to_avoid)
+            if came_from is None:
+                self.maze_explored = True
+        if self.maze_explored:
+            to_avoid = [WALL]
+            if not self.control_room_reached:
+                came_from, neighbor = self.bfs(CONTROL_ROOM, to_avoid)
             else:
-                self.go_somewhere()
+                came_from, neighbor = self.bfs(START, to_avoid)
+        
+        path = self.reconstruct_path(came_from, neighbor)
+        next_position = path[-2]
+        self.print_next_move(next_position)
 
-    def update_grid(self):
-        for y in range(self.nb_rows):
-            row = input()  # row of the ASCII maze
-            for x, c in enumerate(row):
-                self.grid[y][x] = c
-                if c == BEGINNING:
-                    self.start = (x, y)
-                elif c == CONTROL_ROOM:
-                    self.control_room = (x, y)
-
-    def go_somewhere(self):
-        if not self.control_room_reached:
-            # go to the control room
-            result = self.search(self.kirk, CONTROL_ROOM)
-            self.print_next_move(result)
-        else:
-            # go back to the start
-            result = self.search(self.kirk, BEGINNING)
-            self.print_next_move(result)
-
-    def print_next_move(self, result):
-        parents, current = result
-        next_position = (0, 0)
-        # go back to Kirk
-        if result is not None:
-            while current != self.kirk:
-                next_position = current
-                current = parents.get(current, (0, 0))
-
-        # Kirk's next move
-        if self.kirk[0] < next_position[0]:
-            print("RIGHT")
-        elif self.kirk[0] > next_position[0]:
-            print("LEFT")
-        elif self.kirk[1] < next_position[1]:
-            print("DOWN")
-        else:
-            print("UP")
-
-    # BFS from start until goal is reached
-    def search(self, start, goal):
+    def bfs(self, goal, to_avoid):
+        """Compute the shortest path between Kirk and the goal with BFS."""
         visited = set()
         queue = deque()
-        parents = {}  # (x, y): parent
-        visited.add(start)
-        queue.append(start)
+        came_from = {}  # position => parent position on the shortest path
+        queue.append(self.kirk_position)
+        visited.add(self.kirk_position)
 
         while len(queue) != 0:
-            current = queue.popleft()
-            if self.grid[current[1]][current[0]] == goal:
-                return (parents, current)
-            for neighbor in self.neighbors(current):
+            position = queue.popleft()
+            for neighbor in self.neighbors(position, to_avoid):
                 if neighbor not in visited:
                     visited.add(neighbor)
                     queue.append(neighbor)
-                    parents[neighbor] = current
-        return None
+                    came_from[neighbor] = position
+                    neighbor_x, neighbor_y = neighbor
+                    if self.maze[neighbor_y][neighbor_x] == goal:
+                        return (came_from, neighbor)
 
-    def neighbors(self, pos):
-        positions = []
-        self.add(positions, (pos[0] + 1, pos[1]))
-        self.add(positions, (pos[0], pos[1] + 1))
-        self.add(positions, (pos[0] - 1, pos[1]))
-        self.add(positions, (pos[0], pos[1] - 1))
-        return positions
+        return (None, None)
 
-    def add(self, positions, pos):
-        if self.is_valid(pos):
-            positions.append(pos)
+    def neighbors(self, position, to_avoid):
+        neighbors = []
+        x, y = position
+        if x > 0:
+            self.add_neighbor(to_avoid, neighbors, x - 1, y)
+        if x < (self.width - 1):
+            self.add_neighbor(to_avoid, neighbors, x + 1, y)
+        if y > 0:
+            self.add_neighbor(to_avoid, neighbors, x, y - 1)
+        if y < (self.height - 1):
+            self.add_neighbor(to_avoid, neighbors, x, y + 1)
+        return neighbors
 
-    def is_valid(self, pos):
-        c = self.grid[pos[1]][pos[0]]
-        valid_x = pos[0] >= 0 and pos[0] < self.nb_columns
-        valid_y = pos[1] >= 0 and pos[1] <= self.nb_rows
-        return c != WALL and valid_x and valid_y
+    def add_neighbor(self, to_avoid, neighbors, x, y):
+        if self.maze[y][x] not in to_avoid:
+            neighbors.append((x, y))
+
+    def reconstruct_path(self, came_from, neighbor):
+        current_position = neighbor
+        stack = []
+        while current_position in came_from:
+            stack.append(current_position)
+            current_position = came_from[current_position]
+        stack.append(current_position)
+        return stack
+
+    def print_next_move(self, next_position):
+        kirk_x, kirk_y = self.kirk_position
+        next_x, next_y = next_position
+        if kirk_x < next_x:
+            print(RIGHT)
+        elif kirk_x > next_x:
+            print(LEFT)
+        elif kirk_y < next_y:
+            print(DOWN)
+        else:
+            print(UP)
 
 
-maze = Maze()
-maze.read_init_input()
-maze.game_loop()
+if __name__ == "__main__":
+    height, width, _ = map(int, input().split())
+    game = Game(height, width)
+    game.loop()

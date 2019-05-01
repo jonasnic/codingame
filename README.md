@@ -43,18 +43,18 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 ### Hard Puzzles
 | Title | Solution |
 | :---: | :-------: |
-| The Labyrinth | [Python](./puzzles/python3/the-labyrinth) |
+| The Labyrinth | [Python](./puzzles/python3/the-labyrinth) &starf; |
 | Skynet Revolution - Episode 2 | [Python](./puzzles/python3/skynet-revolution2) |
 | Vox Codei - Episode 1 | [Python](./puzzles/python3/vox-codei1) |
-| Super Computer | [Python](./puzzles/python3/super-computer) |
-| Roller Coaster | [Python](./puzzles/python3/roller-coaster) |
-| Surface | [Python](./puzzles/python3/surface) |
+| Super Computer | [Python](./puzzles/python3/super-computer) &starf; |
+| Roller Coaster | [Python](./puzzles/python3/roller-coaster) &starf; |
+| Surface | [Python](./puzzles/python3/surface) &starf; |
 | CGX Formatter | [Python](./puzzles/python3/cgx_formatter.py) |
 | The Last Crusade - Episode 2 | [Java](./puzzles/java/last-crusade2/src/Player.java) |
-| TAN Network | [Python](./puzzles/python3/tan-network) |
-| Genome Sequencing | [Python](./puzzles/python3/genome_sequencing.py) |
+| TAN Network | [Python](./puzzles/python3/tan-network) &starf; |
+| Genome Sequencing | [Python](./puzzles/python3/genome_sequencing.py) &starf; |
 | Bender - Episode 2 | [Python](./puzzles/python3/bender2) |
-| Bender - Episode 3 | [Python](./puzzles/python3/bender3.py) |
+| Bender - Episode 3 | [Python](./puzzles/python3/bender3.py) &starf; |
 
 ### Very Hard Puzzles
 | Title | Solution |
