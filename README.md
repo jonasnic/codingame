@@ -1,5 +1,7 @@
 # Solutions to Codingame Puzzles
 
+CodinGame is a challenge-based training platform for programmers where you can improve your coding skills with fun exercises.
+
 This repository contains solutions to CodinGame puzzles, contests and Clash of Code.
 
 Note: A "&starf;" next to the solution means this is my personal favorite solution.
@@ -62,6 +64,35 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 | The Last Crusade - Episode 3 | [Java](./puzzles/java/last-crusade3/src/Player.java) |
 
 There are solutions available for other puzzles and in other programming languages as well in this repository.
+
+## What I learned
+
+### Programming Fundamentals
+* Variables
+* Input/Ouput
+* Conditions
+* Loops
+* Sorting
+* Functions
+
+### Data Structures
+* Arrays/Multidimensional Arrays
+* Strings
+* Queues
+* Tries
+* Graphs
+* Hash Tables
+
+### Algorithms
+* Binary Search
+* Flood fill
+* DFS/BFS
+* A* search algorithm
+* Backtracking
+* Parsing
+* Greedy Algorithms
+* Dynamic Programming
+* Time Complexity
 
 ## Links
 * [My CodinGame Profile](https://www.codingame.com/profile/8111ec5700e5b6591daabfc46fd79e278747932)
