@@ -46,17 +46,17 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 | Title | Solution |
 | :---: | :-------: |
 | The Labyrinth | [Python](./puzzles/python3/the-labyrinth) &starf; |
-| Skynet Revolution - Episode 2 | [Python](./puzzles/python3/skynet-revolution2) &starf; |
-| Vox Codei - Episode 1 | [Python](./puzzles/python3/vox-codei1) &starf; |
+| Skynet Revolution - Episode 2 | [Python](./puzzles/python3/skynet-revolution2) &starf;, [Kotlin](./puzzles/kotlin/src/skynet-revolution2.kt) |
+| Vox Codei - Episode 1 | [Python](./puzzles/python3/vox-codei1) &starf;, [C++](./puzzles/cpp/vox-codei1.cpp) |
 | Super Computer | [Python](./puzzles/python3/super-computer) &starf; |
 | Roller Coaster | [Python](./puzzles/python3/roller-coaster) &starf; |
-| Surface | [Python](./puzzles/python3/surface) &starf; |
-| CGX Formatter | [Python](./puzzles/python3/cgx_formatter.py) &starf; |
+| Surface | [Python](./puzzles/python3/surface) &starf;, [Kotlin](./puzzles/kotlin/src/surface.kt) |
+| CGX Formatter | [Python](./puzzles/python3/cgx_formatter.py) &starf;, [Kotlin](./puzzles/kotlin/src/cgx-formatter.kt) |
 | The Last Crusade - Episode 2 | [Java](./puzzles/java/last-crusade2/src/Player.java) &starf; |
-| TAN Network | [Python](./puzzles/python3/tan-network) &starf; |
+| TAN Network | [Python](./puzzles/python3/tan-network) &starf;, [Kotlin](./puzzles/kotlin/src/tan-network.kt) |
 | Genome Sequencing | [Python](./puzzles/python3/genome_sequencing.py) &starf; |
-| Bender - Episode 2 | [Python](./puzzles/python3/bender2) &starf; |
-| Bender - Episode 3 | [Python](./puzzles/python3/bender3.py) &starf; |
+| Bender - Episode 2 | [Python](./puzzles/python3/bender2) &starf;, [Kotlin](./puzzles/kotlin/src/bender2.kt), [C++](./puzzles/cpp/bender2.cpp) |
+| Bender - Episode 3 | [Python](./puzzles/python3/bender3.py) &starf;, [Kotlin](puzzles/kotlin/src/bender3.kt) |
 
 ### Very Hard Puzzles
 | Title | Solution |
