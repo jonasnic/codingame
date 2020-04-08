@@ -13,7 +13,7 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 ### Easy Puzzles
 | Title | Solution |
 | :---: | :-------: |
-| Onboarding | [Python](./puzzles/python3/onboarding/onboarding.py), [Java](./puzzles/java/onboarding/Player.java), [JavaScript](./puzzles/js/onboarding.js), [C++](./puzzles/cpp/onboarding.cpp) |
+| Onboarding | [Python](./puzzles/python3/onboarding/onboarding.py) &starf;, [Java](./puzzles/java/onboarding/Player.java), [JavaScript](./puzzles/js/onboarding.js), [C++](./puzzles/cpp/onboarding.cpp) |
 | The Descent | [Python](./puzzles/python3/the-descent) &starf;, [Java](./puzzles/java/the-descent/Player.java), [Kotlin](./puzzles/kotlin/src/the-descent.kt), [TypeScript](./puzzles/ts/the-descent/the-descent.ts), [C++](./puzzles/cpp/the-descent.cpp) |
 | Power of Thor - Episode 1 | [Python](./puzzles/python3/power-of-thor1) &starf;, [Java](./puzzles/java/power-of-thor1/Player.java), [Kotlin](./puzzles/kotlin/src/power-of-thor1.kt), [JavaScript](./puzzles/js/power-of-thor1.js), [TypeScript](./puzzles/ts/power-of-thor1/power-of-thor1.ts), [C++](./puzzles/cpp/power-of-thor1.cpp) |
 | Temperatures | [Python](./puzzles/python3/temperatures) &starf;, [Java](./puzzles/java/temperatures/Player.java), [Kotlin](./puzzles/kotlin/src/temperatures.kt), [JavaScript](./puzzles/js/temperatures.js), [TypeScript](./puzzles/ts/temperatures/temperatures.ts), [C++](./puzzles/cpp/temperatures.cpp) |
@@ -46,22 +46,22 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 | Title | Solution |
 | :---: | :-------: |
 | The Labyrinth | [Python](./puzzles/python3/the-labyrinth) &starf; |
-| Skynet Revolution - Episode 2 | [Python](./puzzles/python3/skynet-revolution2) |
+| Skynet Revolution - Episode 2 | [Python](./puzzles/python3/skynet-revolution2) &starf; |
 | Vox Codei - Episode 1 | [Python](./puzzles/python3/vox-codei1) |
 | Super Computer | [Python](./puzzles/python3/super-computer) &starf; |
 | Roller Coaster | [Python](./puzzles/python3/roller-coaster) &starf; |
 | Surface | [Python](./puzzles/python3/surface) &starf; |
-| CGX Formatter | [Python](./puzzles/python3/cgx_formatter.py) |
-| The Last Crusade - Episode 2 | [Java](./puzzles/java/last-crusade2/src/Player.java) |
+| CGX Formatter | [Python](./puzzles/python3/cgx_formatter.py) &starf; |
+| The Last Crusade - Episode 2 | [Java](./puzzles/java/last-crusade2/src/Player.java) &starf; |
 | TAN Network | [Python](./puzzles/python3/tan-network) &starf; |
 | Genome Sequencing | [Python](./puzzles/python3/genome_sequencing.py) &starf; |
-| Bender - Episode 2 | [Python](./puzzles/python3/bender2) |
+| Bender - Episode 2 | [Python](./puzzles/python3/bender2) &starf; |
 | Bender - Episode 3 | [Python](./puzzles/python3/bender3.py) &starf; |
 
 ### Very Hard Puzzles
 | Title | Solution |
 | :---: | :-------: |
-| The Last Crusade - Episode 3 | [Java](./puzzles/java/last-crusade3/src/Player.java) |
+| The Last Crusade - Episode 3 | [Java](./puzzles/java/last-crusade3/src/Player.java) &starf; |
 
 There are solutions available for other puzzles and in other programming languages as well in this repository.
 
