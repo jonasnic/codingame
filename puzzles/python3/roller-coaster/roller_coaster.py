@@ -1,31 +1,29 @@
-# read game input
-groups = []
-nb_places, nb_rides, nb_groups = map(int, input().split())
-for i in range(nb_groups):
-    group_size = int(input())
-    groups.append(group_size)
+if __name__ == "__main__":
+    nb_places, nb_rides, nb_groups = map(int, input().split())
+    groups = []
+    memo = {}  # group index => (earnings, next_group_index)
+    for _ in range(nb_groups):
+        groups.append(int(input()))
 
-# cache the results starting to fill the ride from each of the groups
-results = []
-for i in range(nb_groups):
-    group_index = i
-    nb_places_left = nb_places
-    while nb_places_left >= groups[group_index]:
-        nb_places_left -= groups[group_index]
-        group_index += 1
-        if group_index == nb_groups:
-            group_index = 0
-        if group_index == i:
-            break
-    money = nb_places - nb_places_left
-    results.append((money, group_index))
+    # calculate earnings starting from each group/subproblem
+    for start_index in range(nb_groups):
+        total_group_size = 0
+        index = start_index
+        while (total_group_size + groups[index]) <= nb_places:
+            total_group_size += groups[index]
+            index += 1
+            if index == nb_groups:
+                index = 0
+            if index == start_index:
+                break
+        memo[start_index] = (total_group_size, index)
 
-# calculate the total money earned during the day
-total_money = 0
-group_index = 0
-for _ in range(nb_rides):
-    money, next_group_index = results[group_index]
-    total_money += money
-    group_index = next_group_index
+    # calculate total earnings during the day
+    total_earnings = 0
+    index = 0
+    for _ in range(nb_rides):
+        earnings, next_group_index = memo[index]
+        total_earnings += earnings
+        index = next_group_index
 
-print(total_money)
+    print(total_earnings)
