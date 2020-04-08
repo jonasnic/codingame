@@ -34,7 +34,7 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 | War | [Python](./puzzles/python3/war) &starf;, [Kotlin](./puzzles/kotlin/src/war.kt), [TypeScript](./puzzles/ts/war/war.ts), [C++](./puzzles/cpp/war.cpp) |
 | Stock Exchange Losses | [Python](./puzzles/python3/stock_exchange.py) |
 | The Last Crusade - Episode 1 | [Python](./puzzles/python3/last_crusade1.py) , [Kotlin](./puzzles/kotlin/src/last-crusade1.kt), [JavaScript](./puzzles/js/last-crusade1) &starf;, [TypeScript](./puzzles/ts/last-crusade1/last-crusade1.ts), [C++](./puzzles/cpp/last-crusade1.cpp) |
-| Network Cabling | [TypeScript](./puzzles/ts/network-cabling/network-cabling.ts) |
+| Network Cabling | [Python](./puzzles/python3/network_cabling.py) |
 | Conway Sequence | [Python](./puzzles/python3/conway_sequence.py), [Kotlin](./puzzles/kotlin/src/conway-sequence.kt), [JavaScript](./puzzles/js/conway-sequence.js), [TypeScript](./puzzles/ts/conway-sequence/conway-sequence.ts), [Haskell](./puzzles/haskell/conway-sequence) &starf; |
 | Telephone Numbers | [TypeScript](./puzzles/ts/telephone-numbers/telephone-numbers.ts) |
 | Dwarfs standing on the shoulders of giants | [TypeScript](./puzzles/ts/dwarfs-giants) |
