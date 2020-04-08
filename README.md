@@ -32,12 +32,12 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 | Skynet Revolution - Episode 1 | [Python](./puzzles/python3/skynet-revolution1) &starf;, [Java](./puzzles/java/skynet-revolution1), [JavaScript](./puzzles/js/skynet-revolution1.js), [TypeScript](./puzzles/ts/skynet-revolution1/skynet-revolution1.ts). [C++](./puzzles/cpp/skynet-revolution1.cpp) |
 | Don't Panic - Episode 1 | [Python](./puzzles/python3/dont_panic1.py) &starf;, [Kotlin](./puzzles/kotlin/src/dont-panic1.kt), [TypeScript](./puzzles/ts/dont-panic1/dont-panic1.ts) |
 | War | [Python](./puzzles/python3/war) &starf;, [Kotlin](./puzzles/kotlin/src/war.kt), [TypeScript](./puzzles/ts/war/war.ts), [C++](./puzzles/cpp/war.cpp) |
-| Stock Exchange Losses | [Python](./puzzles/python3/stock_exchange.py) |
+| Stock Exchange Losses | [Python](./puzzles/python3/stock_exchange.py) &starf; |
 | The Last Crusade - Episode 1 | [Python](./puzzles/python3/last_crusade1.py) , [Kotlin](./puzzles/kotlin/src/last-crusade1.kt), [JavaScript](./puzzles/js/last-crusade1) &starf;, [TypeScript](./puzzles/ts/last-crusade1/last-crusade1.ts), [C++](./puzzles/cpp/last-crusade1.cpp) |
-| Network Cabling | [Python](./puzzles/python3/network_cabling.py) |
+| Network Cabling | [Python](./puzzles/python3/network_cabling.py) &starf; |
 | Conway Sequence | [Python](./puzzles/python3/conway_sequence.py), [Kotlin](./puzzles/kotlin/src/conway-sequence.kt), [JavaScript](./puzzles/js/conway-sequence.js), [TypeScript](./puzzles/ts/conway-sequence/conway-sequence.ts), [Haskell](./puzzles/haskell/conway-sequence) &starf; |
-| Telephone Numbers | [TypeScript](./puzzles/ts/telephone-numbers/telephone-numbers.ts) |
-| Dwarfs standing on the shoulders of giants | [TypeScript](./puzzles/ts/dwarfs-giants) |
+| Telephone Numbers | [TypeScript](./puzzles/ts/telephone-numbers/telephone-numbers.ts) &starf; |
+| Dwarfs standing on the shoulders of giants | [TypeScript](./puzzles/ts/dwarfs-giants) &starf; |
 | Bender - Episode 1 | [Python](./puzzles/python3/bender1) &starf;, [Kotlin](./puzzles/kotlin/src/bender1.kt) |
 | Scrabble | [Python](./puzzles/python3/scrabble) &starf;, [Kotlin](./puzzles/kotlin/src/scrabble.kt), [JavaScript](./puzzles/js/scrabble.js), [TypeScript](./puzzles/ts/scrabble/scrabble.ts) |
 | Mayan Calculation | [Python](./puzzles/python3/mayan_calc.py), [Kotlin](./puzzles/kotlin/src/mayan-calc) &starf;, [Ruby](./puzzles/ruby/mayan-calc.rb) |
@@ -47,7 +47,7 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 | :---: | :-------: |
 | The Labyrinth | [Python](./puzzles/python3/the-labyrinth) &starf; |
 | Skynet Revolution - Episode 2 | [Python](./puzzles/python3/skynet-revolution2) &starf; |
-| Vox Codei - Episode 1 | [Python](./puzzles/python3/vox-codei1) |
+| Vox Codei - Episode 1 | [Python](./puzzles/python3/vox-codei1) &starf; |
 | Super Computer | [Python](./puzzles/python3/super-computer) &starf; |
 | Roller Coaster | [Python](./puzzles/python3/roller-coaster) &starf; |
 | Surface | [Python](./puzzles/python3/surface) &starf; |
