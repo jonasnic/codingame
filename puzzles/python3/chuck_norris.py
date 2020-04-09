@@ -30,8 +30,9 @@ def to_unary(text):
     return unary_text
 
 
-text = input()
-binary_text = to_binary(text)
-unary_text = to_unary(binary_text)
+if __name__ == "__main__":
+    text = input()
+    binary_text = to_binary(text)
+    unary_text = to_unary(binary_text)
 
-print(unary_text)
+    print(unary_text)
