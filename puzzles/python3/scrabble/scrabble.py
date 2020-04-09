@@ -19,29 +19,32 @@ def is_valid_word(word, letters):
     return True
 
 
-def score(word):
+def calculate_score(word):
     total = 0
     for c in word:
         total += POINTS[c]
     return total
 
 
-# read game input
-words = []
-nb_words = int(input())
-for i in range(nb_words):
-    words.append(input())
-letters = input()
+def solve(words, letters):
+    best_score = 0
+    best_word = ""
+    for word in words:
+        letters_copy = list(letters)
+        if is_valid_word(word, letters_copy):
+            current_score = calculate_score(word)
+            if current_score > best_score:
+                best_score = current_score
+                best_word = word
+    return best_word
 
-# compute solution
-best_score = 0
-best_word = ""
-for word in words:
-    lettersCopy = list(letters)
-    if is_valid_word(word, lettersCopy):
-        current_score = score(word)
-        if current_score > best_score:
-            best_score = current_score
-            best_word = word
 
-print(best_word)
+if __name__ == "__main__":
+    # read game input
+    words = []
+    nb_words = int(input())
+    for _ in range(nb_words):
+        words.append(input())
+    letters = input()
+
+    print(solve(words, letters))
