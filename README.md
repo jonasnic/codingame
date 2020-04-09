@@ -22,7 +22,7 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 | Chuck Norris | [Python](./puzzles/python3/chuck_norris.py), [Kotlin](./puzzles/kotlin/src/chuck-norris.kt), [TypeScript](./puzzles/ts/chuck-norris) &starf;, [C++](./puzzles/cpp/chuck-norris.cpp) | Strings, Encoding |
 | MIME Type | [Python](./puzzles/python3/mime_type.py), [Kotlin](./puzzles/kotlin/src/mime-type.kt), [TypeScript](./puzzles/ts/mime-type) &starf; | Strings, Hash Tables |
 | **Defibrillators** | [Python](./puzzles/python3/defibrillators) &starf;, [Kotlin](./puzzles/kotlin/src/defibrillators.kt), [JavaScript](./puzzles/js/defibrillators.js), [TypeScript](./puzzles/ts/defibrillators/defibrillators.ts) | Strings, Trigonometry |
-| **Horse-racing Duals** | [Python](./puzzles/python3/horse_racing_duals.py), [Kotlin](./puzzles/kotlin/src/horse-racing-duals.kt), [JavaScript](./puzzles/js/horse-racing-duals.js), [TypeScript](./puzzles/ts/horse-racing-duals/horse-racing-duals.ts), [Ruby](./puzzles/ruby/horse-racing-duals) &starf; | Sorting |
+| **Horse-racing Duals** | [Python](./puzzles/python3/horse_racing_duals.py), [Kotlin](./puzzles/kotlin/src/horse-racing-duals.kt), [JavaScript](./puzzles/js/horse-racing-duals.js), [Ruby](./puzzles/ruby/horse-racing-duals) &starf; | Sorting |
 
 ### Medium Puzzles
 | Title | Solution | Topic(s) |
@@ -67,10 +67,7 @@ There are solutions available for other puzzles and in other programming languag
 
 ## What I learned
 
-* Variables
-* Input/Ouput
-* Conditions
-* Loops
+* Programming Fundamentals
 * Functions
 * Classes
 * Data Structures & Algorithms
