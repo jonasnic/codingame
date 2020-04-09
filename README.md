@@ -35,7 +35,7 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 | Stock Exchange Losses | [Python](./puzzles/python3/stock_exchange.py) &starf; | Conditions, Loops |
 | The Last Crusade - Episode 1 | [Python](./puzzles/python3/last_crusade1.py) , [Kotlin](./puzzles/kotlin/src/last-crusade1.kt), [JavaScript](./puzzles/js/last-crusade1) &starf;, [TypeScript](./puzzles/ts/last-crusade1/last-crusade1.ts), [C++](./puzzles/cpp/last-crusade1.cpp) | 2D Arrays |
 | Network Cabling | [Python](./puzzles/python3/network_cabling.py) &starf; | Sorting, Median |
-| Conway Sequence | [Python](./puzzles/python3/conway_sequence.py), [Kotlin](./puzzles/kotlin/src/conway-sequence.kt), [JavaScript](./puzzles/js/conway-sequence.js), [TypeScript](./puzzles/ts/conway-sequence/conway-sequence.ts), [Haskell](./puzzles/haskell/conway-sequence) &starf; | Sequences |
+| Conway Sequence | [Python](./puzzles/python3/conway_sequence.py), [Kotlin](./puzzles/kotlin/src/conway-sequence.kt), [JavaScript](./puzzles/js/conway-sequence.js), [Haskell](./puzzles/haskell/conway-sequence) &starf; | Sequences |
 | Telephone Numbers | [Python](./puzzles/python3/telephone_numbers.py) &starf; | Tries |
 | Dwarfs standing on the shoulders of giants | [Python](./puzzles/python3/dwarfs-giants.py) &starf;, [TypeScript](./puzzles/ts/dwarfs-giants) | Graphs, Recursion |
 | Bender - Episode 1 | [Python](./puzzles/python3/bender1) &starf;, [Kotlin](./puzzles/kotlin/src/bender1.kt) | 2D Arrays, State Machine, Simulation |
