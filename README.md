@@ -45,33 +45,25 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 ### Hard Puzzles
 | Title | Solution | Topic(s) |
 | :---: | :------: | :------: |
-| The Labyrinth | [Python](./puzzles/python3/the-labyrinth) &starf; |
-| **Skynet Revolution - Episode 2** | [Python](./puzzles/python3/skynet-revolution2) &starf;, [Kotlin](./puzzles/kotlin/src/skynet-revolution2.kt) |
-| **Vox Codei - Episode 1** | [Python](./puzzles/python3/vox-codei1) &starf;, [C++](./puzzles/cpp/vox-codei1.cpp) |
-| Super Computer | [Python](./puzzles/python3/super-computer) &starf; |
-| Roller Coaster | [Python](./puzzles/python3/roller-coaster) &starf; |
-| Surface | [Python](./puzzles/python3/surface) &starf;, [Kotlin](./puzzles/kotlin/src/surface.kt) |
-| CGX Formatter | [Python](./puzzles/python3/cgx_formatter.py) &starf;, [Kotlin](./puzzles/kotlin/src/cgx-formatter.kt) |
-| The Last Crusade - Episode 2 | [Java](./puzzles/java/last-crusade2/src/Player.java) &starf; |
-| **TAN Network** | [Python](./puzzles/python3/tan-network) &starf;, [Kotlin](./puzzles/kotlin/src/tan-network.kt) |
-| Genome Sequencing | [Python](./puzzles/python3/genome_sequencing.py) &starf; |
-| Bender - Episode 2 | [Python](./puzzles/python3/bender2) &starf;, [Kotlin](./puzzles/kotlin/src/bender2.kt), [C++](./puzzles/cpp/bender2.cpp) |
-| Bender - Episode 3 | [Python](./puzzles/python3/bender3.py) &starf;, [Kotlin](puzzles/kotlin/src/bender3.kt) |
+| The Labyrinth | [Python](./puzzles/python3/the-labyrinth) &starf; | 2D Arrays, Graphs, BFS |
+| **Skynet Revolution - Episode 2** | [Python](./puzzles/python3/skynet-revolution2) &starf;, [Kotlin](./puzzles/kotlin/src/skynet-revolution2.kt) | Graphs |
+| **Vox Codei - Episode 1** | [Python](./puzzles/python3/vox-codei1) &starf;, [C++](./puzzles/cpp/vox-codei1.cpp) | Simulation |
+| Super Computer | [Python](./puzzles/python3/super-computer) &starf; | Sorting, Greedy Algorithms, Scheduling |
+| Roller Coaster | [Python](./puzzles/python3/roller-coaster) &starf; | Queues, Dynamic Programming, Simulation |
+| Surface | [Python](./puzzles/python3/surface) &starf;, [Kotlin](./puzzles/kotlin/src/surface.kt) | 2D Arrays, Flood Fill |
+| CGX Formatter | [Python](./puzzles/python3/cgx_formatter.py) &starf;, [Kotlin](./puzzles/kotlin/src/cgx-formatter.kt) | Strings, Parsing |
+| The Last Crusade - Episode 2 | [Java](./puzzles/java/last-crusade2/src/Player.java) &starf; | Pathfinding |
+| **TAN Network** | [Python](./puzzles/python3/tan-network) &starf;, [Kotlin](./puzzles/kotlin/src/tan-network.kt) | Graphs, Pathfinding |
+| Genome Sequencing | [Python](./puzzles/python3/genome_sequencing.py) &starf; | Strings, Shortest Common Supersequence |
+| Bender - Episode 2 | [Python](./puzzles/python3/bender2) &starf;, [Kotlin](./puzzles/kotlin/src/bender2.kt), [C++](./puzzles/cpp/bender2.cpp) | Pathfinding |
+| Bender - Episode 3 | [Python](./puzzles/python3/bender3.py) &starf;, [Kotlin](puzzles/kotlin/src/bender3.kt) | Time Complexity |
 
 ### Very Hard Puzzles
 | Title | Solution | Topic(s) |
 | :---: | :------: | :------: |
-| The Last Crusade - Episode 3 | [Java](./puzzles/java/last-crusade3/src/Player.java) &starf; |
+| The Last Crusade - Episode 3 | [Java](./puzzles/java/last-crusade3/src/Player.java) &starf; | Pathfinding |
 
-There are solutions available for other puzzles and in other programming languages as well in this repository.
-
-## What I learned
-
-* Programming Fundamentals
-* Functions
-* Classes
-* Data Structures & Algorithms
-* Functional Programming
+There are solutions available for other puzzles/programming languages as well in this repository.
 
 ## Links
 * [My CodinGame Profile](https://www.codingame.com/profile/8111ec5700e5b6591daabfc46fd79e278747932)

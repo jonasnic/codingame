@@ -1,6 +1,7 @@
+// The Last Crusade - Episode 2
+
 import java.util.*;
 
-// The Last Crusade - Episode 2
 class Player {
   public static void main(String args[]) {
     Crusade crusade = new Crusade();

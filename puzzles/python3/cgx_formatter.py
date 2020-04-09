@@ -7,7 +7,7 @@ class CGXFormatter:
 
     def read_lines(self):
         self.nb_lines = int(input())
-        for i in range(self.nb_lines):
+        for _ in range(self.nb_lines):
             line = input()
             for char in line:
                 self.read_char(char)
@@ -45,7 +45,7 @@ class CGXFormatter:
 
     def print_char(self, char):
         if self.new_line:
-            for i in range(self.total_indent):
+            for _ in range(self.total_indent):
                 print(' ', end='')
             self.new_line = False
         print(char, end='')
@@ -55,5 +55,6 @@ class CGXFormatter:
         self.new_line = True
 
 
-formatter = CGXFormatter()
-formatter.read_lines()
+if __name__ == "__main__":
+    formatter = CGXFormatter()
+    formatter.read_lines()

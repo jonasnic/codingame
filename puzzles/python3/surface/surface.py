@@ -75,6 +75,7 @@ class Grid:
             queue.append(node)
 
 
-grid = Grid()
-grid.read_game_input()
-grid.test()
+if __name__ == "__main__":
+    grid = Grid()
+    grid.read_game_input()
+    grid.test()

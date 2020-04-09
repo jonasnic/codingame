@@ -16,18 +16,18 @@ def compute_min_subseq_length(subsequences):
         sequence = permutation[0]
         for i in range(1, len(permutation)):
             j = 0
-            while (j < len(sequence)):
+            while j < len(sequence):
                 subsequence = permutation[i]
                 # check if the subsequence is contained within the sequence
-                if (sequence.find(subsequence) != -1):
+                if sequence.find(subsequence) != -1:
                     break
                 # check if there is a partial match
                 end_index = len(sequence) - j
-                if (sequence[j:] == subsequence[:end_index]):
+                if sequence[j:] == subsequence[:end_index]:
                     sequence += subsequence[end_index:]
                 j += 1
             # check if there is no match
-            if (j == len(sequence)):
+            if j == len(sequence):
                 sequence += subsequence
         min_length = min(min_length, len(sequence))
     return min_length
