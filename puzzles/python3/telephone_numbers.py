@@ -1,10 +1,10 @@
 if __name__ == "__main__":
+    n = int(input())
     trie = {}
     nb_elements = 0  # number of elements (referencing a number) stored in the structure
-    n = int(input())
-    for i in range(n):
-        current_node = trie
+    for _ in range(n):
         phone_number = input()
+        current_node = trie
         for digit in phone_number:
             if digit in current_node:
                 current_node = current_node[digit]
