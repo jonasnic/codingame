@@ -16,6 +16,8 @@ class Node:
 
 class Grid:
     def __init__(self):
+        self.width = 0
+        self.height = 0
         self.nodes = []
         self.lakes = {}  # lake_index: surface area
 
