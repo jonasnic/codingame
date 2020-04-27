@@ -50,7 +50,7 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 | **Vox Codei - Episode 1** | [Python](./puzzles/python3/vox-codei1) &starf;, [C++](./puzzles/cpp/vox-codei1.cpp) | Simulation |
 | Super Computer | [Python](./puzzles/python3/super-computer) &starf; | Sorting, Greedy Algorithms, Scheduling |
 | Roller Coaster | [Python](./puzzles/python3/roller-coaster) &starf; | Queues, Dynamic Programming, Simulation |
-| Surface | [Python](./puzzles/python3/surface) &starf;, [Kotlin](./puzzles/kotlin/src/surface.kt) | 2D Arrays, Flood Fill |
+| Surface | [Python](./puzzles/python3/surface) &starf;, [Kotlin](./puzzles/kotlin/src/surface.kt) | 2D Arrays, Graphs, Flood Fill |
 | CGX Formatter | [Python](./puzzles/python3/cgx_formatter.py) &starf;, [Kotlin](./puzzles/kotlin/src/cgx-formatter.kt) | Strings, Parsing |
 | The Last Crusade - Episode 2 | [Java](./puzzles/java/last-crusade2/src/Player.java) &starf; | Pathfinding |
 | **TAN Network** | [Python](./puzzles/python3/tan-network) &starf;, [Kotlin](./puzzles/kotlin/src/tan-network.kt) | Graphs, Pathfinding |
