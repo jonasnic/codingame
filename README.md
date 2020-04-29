@@ -11,7 +11,7 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 ## Puzzles
 
 ### Easy Puzzles
-| Title | Solution | Topic(s) |
+| Title | Solution(s) | Topic(s) |
 | :---: | :------: | :------: |
 | Onboarding | [Python](./puzzles/python3/onboarding/onboarding.py) &starf;, [Java](./puzzles/java/onboarding/Player.java), [JavaScript](./puzzles/js/onboarding.js), [C++](./puzzles/cpp/onboarding.cpp) | Variables, Input/Output, Conditions |
 | The Descent | [Python](./puzzles/python3/the-descent) &starf;, [Java](./puzzles/java/the-descent/Player.java), [Kotlin](./puzzles/kotlin/src/the-descent.kt), [TypeScript](./puzzles/ts/the-descent/the-descent.ts), [C++](./puzzles/cpp/the-descent.cpp) | Conditions, Loops |
@@ -25,7 +25,7 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 | **Horse-racing Duals** | [Python](./puzzles/python3/horse_racing_duals.py), [Kotlin](./puzzles/kotlin/src/horse-racing-duals.kt), [JavaScript](./puzzles/js/horse-racing-duals.js), [Ruby](./puzzles/ruby/horse-racing-duals) &starf; | Arrays, Sorting |
 
 ### Medium Puzzles
-| Title | Solution | Topic(s) |
+| Title | Solution(s) | Topic(s) |
 | :---: | :------: | :------: |
 | Shadows of the Knight - Episode 1 | [Python](./puzzles/python3/shadows_knight1.py), [Kotlin](./puzzles/kotlin/src/shadows-knight1.kt), [JavaScript](./puzzles/js/shadows-knight1.js), [TypeScript](./puzzles/ts/shadows-knight1/shadows-knight1.ts), [C++](./puzzles/cpp/shadows-knight1.cpp), [Ruby](./puzzles/ruby/shadows-knight1) &starf; | Binary Search, 2D Arrays |
 | There is no Spoon - Episode 1 | [Python](./puzzles/python3/there-is-no-spoon1) &starf;, [Kotlin](./puzzles/kotlin/src/there-is-no-spoon1.kt), [JavaScript](./puzzles/js/there-is-no-spoon1.js), [TypeScript](./puzzles/ts/there-is-no-spoon1/there-is-no-spoon1.ts), [C++](./puzzles/cpp/there-is-no-spoon1.cpp) | 2D Arrays |
@@ -43,7 +43,7 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 | **Mayan Calculation** | [Python](./puzzles/python3/mayan_calc.py), [Kotlin](./puzzles/kotlin/src/mayan-calc) &starf;, [Ruby](./puzzles/ruby/mayan-calc.rb) | Strings |
 
 ### Hard Puzzles
-| Title | Solution | Topic(s) |
+| Title | Solution(s) | Topic(s) |
 | :---: | :------: | :------: |
 | The Labyrinth | [Python](./puzzles/python3/the-labyrinth) &starf; | 2D Arrays, Graphs, BFS |
 | **Skynet Revolution - Episode 2** | [Python](./puzzles/python3/skynet-revolution2) &starf;, [Kotlin](./puzzles/kotlin/src/skynet-revolution2.kt) | Graphs |
@@ -59,7 +59,7 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 | Bender - Episode 3 | [Python](./puzzles/python3/bender3.py) &starf;, [Kotlin](puzzles/kotlin/src/bender3.kt) | Time Complexity |
 
 ### Very Hard Puzzles
-| Title | Solution | Topic(s) |
+| Title | Solution(s) | Topic(s) |
 | :---: | :------: | :------: |
 | The Last Crusade - Episode 3 | [Java](./puzzles/java/last-crusade3/src/Player.java) &starf; | Pathfinding |
 
