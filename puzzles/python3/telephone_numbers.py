@@ -12,5 +12,5 @@ if __name__ == "__main__":
                 current_node[digit] = {}
                 current_node = current_node[digit]
                 nb_elements += 1
-    
+
     print(nb_elements)

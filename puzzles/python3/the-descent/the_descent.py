@@ -15,4 +15,3 @@ if __name__ == "__main__":
                 max_mountain_height = mountain_height
                 index_to_fire = index
         print(index_to_fire)
- 

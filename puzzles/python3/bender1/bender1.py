@@ -23,9 +23,9 @@ class Cell:
         self.reset()
 
     def reset(self):
-        self.previous_bender_reverse_state = None
-        self.previous_bender_break_mode_state = None
-        self.previous_bender_direction = None
+        self.prev_bender_reverse_state = None
+        self.prev_bender_break_mode_state = None
+        self.prev_bender_direction = None
 
 
 class Bender:
@@ -83,7 +83,10 @@ class Game:
         symbol = self.grid[y][x].symbol
         x_is_valid = x >= 0 and x < self.grid_width
         y_is_valid = y >= 0 and y < self.grid_height
-        symbol_is_valid = symbol != STRONG_WALL_SYMBOL and (symbol != WEAK_WALL_SYMBOL or self.bender.break_mode_state)
+        symbol_is_valid = all([
+            symbol != STRONG_WALL_SYMBOL,
+            symbol != WEAK_WALL_SYMBOL or self.bender.break_mode_state
+        ])
         return x_is_valid and y_is_valid and symbol_is_valid
 
     def update_bender_state(self):
@@ -119,15 +122,22 @@ class Game:
             self.bender.move()
 
         cell = self.grid[self.bender.y][self.bender.x]
-        cell_state = (cell.previous_bender_reverse_state, cell.previous_bender_break_mode_state, cell.previous_bender_direction)
-        bender_state = (self.bender.reverse_state, self.bender.break_mode_state, self.bender.direction)
+        cell_state = (
+            cell.prev_bender_reverse_state,
+            cell.prev_bender_break_mode_state,
+            cell.prev_bender_direction
+        )
+        bender_state = (
+            self.bender.reverse_state,
+            self.bender.break_mode_state,
+            self.bender.direction
+        )
         if cell_state != bender_state:
-            cell.previous_bender_reverse_state = self.bender.reverse_state
-            cell.previous_bender_break_mode_state = self.bender.break_mode_state
-            cell.previous_bender_direction = self.bender.direction
+            cell.prev_bender_reverse_state = self.bender.reverse_state
+            cell.prev_bender_break_mode_state = self.bender.break_mode_state
+            cell.prev_bender_direction = self.bender.direction
         else:
             self.loop = True
-
 
 
 def read_input_data(game):
@@ -153,7 +163,7 @@ def read_input_data(game):
 if __name__ == "__main__":
     game = Game()
     read_input_data(game)
-    
+
     while game.current_symbol != FINISH_SYMBOL:
         game.move_bender()
 

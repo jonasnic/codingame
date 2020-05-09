@@ -18,7 +18,7 @@ def read_game_input():
     points = []
     nb_points = int(input())
     for _ in range(nb_points):
-        point = tuple(map(int ,input().split()))  # nb_items, time
+        point = tuple(map(int, input().split()))  # nb_items, time
         points.append(point)
     return points
 

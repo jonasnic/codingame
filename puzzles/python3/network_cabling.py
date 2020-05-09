@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
     # length of horizontal cable
     cable_length = max_x - min_x
-    
+
     # calculate y median to minimize the length of vertical cable(s)
     y_coordinates.sort()
     y_median = y_coordinates[nb_buildings // 2]

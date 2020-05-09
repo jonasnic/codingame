@@ -14,13 +14,13 @@ class Graph:
             parent_id, child_id = map(int, input().split())
             parent = None
             child = None
-            
+
             if child_id in self.nodes:
-               child = self.nodes[child_id]
+                child = self.nodes[child_id]
             else:
                 child = Node(child_id)
                 self.nodes[child_id] = child
-                
+
             if parent_id in self.nodes:
                 parent = self.nodes[parent_id]
                 parent.children.add(child_id)

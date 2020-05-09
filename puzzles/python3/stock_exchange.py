@@ -12,5 +12,4 @@ if __name__ == "__main__":
             if loss > max_loss:
                 max_loss = loss
 
-
     print(-max_loss)

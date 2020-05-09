@@ -1,5 +1,4 @@
 import re
-import itertools
 from collections import deque
 from functools import total_ordering
 
@@ -35,7 +34,7 @@ class Player:
 
 
 def read_player_input(player_number):
-    card_pattern = "([\dJQKA]+)([DHCS])"
+    card_pattern = r"([\dJQKA]+)([DHCS])"
     player = Player(player_number)
     nb_cards = int(input())
     for _ in range(nb_cards):
@@ -92,7 +91,6 @@ def play_game(player1, player2):
             deck_index += 4
 
     return get_game_result(player1, player2, nb_rounds)
-
 
 
 if __name__ == "__main__":

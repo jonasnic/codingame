@@ -1,19 +1,3 @@
-if __name__ == "__main__":
-    rooms = []
-    nbColumns, nbRows = [int(i) for i in input().split()]
-    for i in range(nbRows):
-        line = [int(i) for i in input().split()]
-        rooms.append(line)
-    ex = int(input())
-
-    # game loop
-    while True:
-        x, y, entrance = input().split()
-        x = int(x)
-        y = int(y)
-        print_next_room(rooms[y][x], x, y, entrance)
-
-
 def print_next_room(room_type, x, y, entrance):
     if room_type in [2, 6]:
         if entrance == "LEFT":
@@ -37,3 +21,19 @@ def print_next_room(room_type, x, y, entrance):
     else:
         y += 1
     print("{} {}".format(x, y))
+
+
+if __name__ == "__main__":
+    rooms = []
+    nbColumns, nbRows = [int(i) for i in input().split()]
+    for i in range(nbRows):
+        line = [int(i) for i in input().split()]
+        rooms.append(line)
+    ex = int(input())
+
+    # game loop
+    while True:
+        x, y, entrance = input().split()
+        x = int(x)
+        y = int(y)
+        print_next_room(rooms[y][x], x, y, entrance)

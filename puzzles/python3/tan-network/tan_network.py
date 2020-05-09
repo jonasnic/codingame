@@ -78,7 +78,7 @@ def a_star(graph):
         # mark current as visited
         open_set.remove(current_id)
         closed_set.add(current_id)
-        
+
         # explore neighbors
         for neighbor_id in graph.nodes[current_id].routes:
             if neighbor_id in closed_set:

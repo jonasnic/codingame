@@ -50,7 +50,7 @@ class Game:
                 came_from, neighbor = self.bfs(CONTROL_ROOM, to_avoid)
             else:
                 came_from, neighbor = self.bfs(START, to_avoid)
-        
+
         path = self.reconstruct_path(came_from, neighbor)
         next_position = path[-2]
         self.print_next_move(next_position)
