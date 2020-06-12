@@ -6,7 +6,7 @@ This repository contains solutions to CodinGame puzzles, contests and Clash of C
 
 Note: A "&starf;" next to the solution means this is my personal favorite solution.
 
-![](https://img.shields.io/github/languages/count/charlesfranciscodev/codingame.svg) ![](https://img.shields.io/github/languages/top/charlesfranciscodev/codingame.svg) ![Hits](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fgithub.com%2Fcharlesfranciscodev%2Fcodingame)
+![](https://img.shields.io/github/languages/count/charlesfranciscodev/codingame.svg) ![](https://img.shields.io/github/languages/top/charlesfranciscodev/codingame.svg) ![Hits](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fgithub.com%2Fcharlesfranciscodev%2Fcodingame) ![](https://img.shields.io/badge/code%20style-flake8-black)
 
 ## Puzzles
 
