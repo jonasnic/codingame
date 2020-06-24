@@ -3,7 +3,6 @@ import java.util.*;
 class Player {
   public static void main(String args[]) {
     Scanner in = new Scanner(System.in);
-
     // game loop
     while (true) {
       int max = -1;
@@ -15,7 +14,6 @@ class Player {
           indexMax = i;      
         }
       }
-
       System.out.println(indexMax); // The index of the mountain to fire on.
     }
   }
