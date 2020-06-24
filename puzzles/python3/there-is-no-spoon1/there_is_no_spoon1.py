@@ -10,7 +10,7 @@ if __name__ == "__main__":
 
     for y in range(height):
         for x in range(width):
-            if (grid[y][x] == NODE):
+            if grid[y][x] == NODE:
                 # node
                 output = "{} {} ".format(x, y)
 
