@@ -10,8 +10,8 @@ fun main(args : Array<String>) {
 
 fun toBinary(text: String): String {
   var binary = StringBuilder()
-  for (char in text) {
-    val binaryStr = Integer.toBinaryString(char.toInt())
+  for (character in text) {
+    val binaryStr = Integer.toBinaryString(character.toInt())
     val number = binaryStr.toInt()
     binary.append(String.format("%07d", number))
   }
@@ -22,8 +22,8 @@ fun toUnary(text: String): String {
   val unary = StringBuilder()
   var prevDigit = false // false = 0, true = 1
   if (text.isNotEmpty()) {
-    val char = text[0]
-    if (char == '0') {
+    val character = text[0]
+    if (character == '0') {
       unary.append("00 0")
     } else {
       unary.append("0 0")

@@ -15,37 +15,37 @@ class CGXFormatter {
     }
     for (i in 0 until n) {
       val line = input.nextLine()
-      for (char in line) {
-        readChar(char)
+      for (character in line) {
+        readChar(character)
       }
     }
   }
 
-  fun readChar(char: Char) {
+  fun readChar(character: Char) {
     if (insideString) {
-      if (char == '\'') {
+      if (character == '\'') {
         insideString = false
       }
-      printChar(char)
+      printChar(character)
     } else {
-      readCharOutsideString(char)
+      readCharOutsideString(character)
     }
   }
 
-  fun readCharOutsideString(char: Char) {
-    if (char == ' ' || char == '\t') {
+  fun readCharOutsideString(character: Char) {
+    if (character == ' ' || character == '\t') {
       return
     }
-    when (char) {
+    when (character) {
       '\'' -> {
         insideString = true
-        printChar(char)
+        printChar(character)
       }
       '(' -> {
         if (!newLine) {
           printNewLine()
         }
-        printChar(char)
+        printChar(character)
         printNewLine()
         totalIndent += BASE_INDENT
       }
@@ -54,24 +54,24 @@ class CGXFormatter {
         if (!newLine) {
           printNewLine()
         }
-        printChar(char)
+        printChar(character)
       }
       ';' -> {
-        printChar(char)
+        printChar(character)
         printNewLine()
       }
-      else -> printChar(char)
+      else -> printChar(character)
     }
   }
 
-  fun printChar(char: Char) {
+  fun printChar(character: Char) {
     if (newLine) {
       for (i in 0 until totalIndent) {
         print(' ')
       }
       newLine = false
     }
-    print(char)
+    print(character)
   }
 
   fun printNewLine() {

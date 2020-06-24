@@ -42,13 +42,13 @@ func main() {
     var currentScore = 0
 
     // calculate the total score for one word
-    for _, char := range word {
-      var index = strings.IndexRune(letters2, char)
+    for _, character := range word {
+      var index = strings.IndexRune(letters2, character)
       if index == -1 {
         isValid = false
       } else {
         letters2 = letters2[:index] + letters2[index+1:]
-        currentScore += scores[char]
+        currentScore += scores[character]
       }
     }
 

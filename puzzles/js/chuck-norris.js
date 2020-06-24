@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // Convert the string into its binary representation.
 function toBinary(msg) {
@@ -17,12 +17,12 @@ function toBinary(msg) {
 function toUnary(msg) {
   let unaryMsg = "";
   let prevDigit = false; // false = 0, true = 1
-  let char;
+  let character;
 
   // first character
   if (msg.length >= 1) {
-    char = msg[0];
-    if (char === '0') {
+    character = msg[0];
+    if (character === '0') {
       unaryMsg += "00 0"; // new sequence of zeros
     } else {
       unaryMsg += "0 0"; // new sequence of ones
@@ -31,11 +31,11 @@ function toUnary(msg) {
   }
 
   for (let i = 1; i < msg.length; ++i) {
-    char = msg[i];
-    if ((char === '0') && prevDigit) { // Switch from 1 to 0
+    character = msg[i];
+    if ((character === '0') && prevDigit) { // Switch from 1 to 0
       unaryMsg += " 00 0";
       prevDigit = false;
-    } else if ((char == '1') && !prevDigit) { // Switch from 0 to 1
+    } else if ((character == '1') && !prevDigit) { // Switch from 0 to 1
       unaryMsg += " 0 0";
       prevDigit = true;
     } else { // Repeated 0 or 1

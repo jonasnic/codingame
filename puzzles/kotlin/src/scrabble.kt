@@ -22,14 +22,14 @@ fun main(args : Array<String>) {
     var currentScore = 0
 
     // calculate the total score for one word
-    for (char in word) {
-      val index = letters2.indexOf(char)
+    for (character in word) {
+      val index = letters2.indexOf(character)
       if (index == -1) {
         isValid = false
         break
       }
       letters2.removeAt(index)
-      currentScore += getScore(char)
+      currentScore += getScore(character)
     }
 
     if (isValid && currentScore > highScore) {

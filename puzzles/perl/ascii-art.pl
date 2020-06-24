@@ -11,8 +11,8 @@ for my $i (0..$height-1) {
   chomp(my $row = <STDIN>);
   my $output = "";
   for my $j (0..(length($text)-1)) {
-    my $char = uc substr($text, $j, 1);
-    my $position = ord($char) - ord('A');
+    my $character = uc substr($text, $j, 1);
+    my $position = ord($character) - ord('A');
     if ($position < 0 || $position > 25) {
       $position = 26;
     }

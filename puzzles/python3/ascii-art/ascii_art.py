@@ -5,8 +5,8 @@ if __name__ == "__main__":
     for _ in range(height):
         row = input()
         output = ""
-        for char in text:
-            position = ord(char) - ord('A')
+        for character in text:
+            position = ord(character) - ord('A')
             if position < 0 or position > 25:
                 position = 26
             start = position * width

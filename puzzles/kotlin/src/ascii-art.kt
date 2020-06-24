@@ -12,8 +12,8 @@ fun main(args : Array<String>) {
   for (i in 0 until height) {
     val row = input.nextLine()
     val output = StringBuilder()
-    for (char in text) {
-      var position = char.toInt() - 'A'.toInt()
+    for (character in text) {
+      var position = character.toInt() - 'A'.toInt()
       if (position < 0 || position > 25) {
         position = 26
       }

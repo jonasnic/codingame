@@ -31,11 +31,11 @@ for ($i = 0; $i < $nbWords; ++$i) {
 
   // calculate the total score for one word
   for ($j = 0; $j < strlen($word); ++$j) {
-    $char = $word[$j];
-    $pos = strpos($letters2, $char);
+    $character = $word[$j];
+    $pos = strpos($letters2, $character);
     if ($pos !== false) {
-      $letters2 = substr_replace($letters2, "", $pos, strlen($char)); // remove the letter  
-      $currentScore += getScore($char);
+      $letters2 = substr_replace($letters2, "", $pos, strlen($character)); // remove the letter  
+      $currentScore += getScore($character);
     } else {
       $isValid = false; // unavailable letter
       break;

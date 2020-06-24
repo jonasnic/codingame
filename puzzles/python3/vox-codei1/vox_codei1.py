@@ -48,7 +48,7 @@ class Grid:
     def is_destroyed(self):
         for y in range(self.height):
             for x in range(self.width):
-                if (self.nodes[y][x].char == TARGET):
+                if self.nodes[y][x].char == TARGET:
                     return False
         return True
 
@@ -63,9 +63,9 @@ class Grid:
         max_node = None
         for y in range(self.height):
             for x in range(self.width):
-                if (self.is_valid_future_bomb_placement(x, y)):
+                if self.is_valid_future_bomb_placement(x, y):
                     score = self.place_bomb_score(x, y)
-                    if (score > max_score):
+                    if score > max_score:
                         max_score = score
                         max_node = self.nodes[y][x]
         return max_node
@@ -75,38 +75,38 @@ class Grid:
     def place_bomb(self, x, y):
         # BOTTOM
         for i in range(y + 1, y + (BOMB_RANGE + 1)):
-            if (i >= self.height):
+            if i >= self.height:
                 break
-            if (self.is_valid_target(x, i)):
+            if self.is_valid_target(x, i):
                 self.destroy(x, i)
-            elif (self.nodes[i][x].char == WALL):
+            elif self.nodes[i][x].char == WALL:
                 break
 
         # TOP
         for j in range(y - 1, y - (BOMB_RANGE + 1), -1):
-            if (j < 0):
+            if j < 0:
                 break
-            if (self.is_valid_target(x, j)):
+            if self.is_valid_target(x, j):
                 self.destroy(x, j)
-            elif (self.nodes[j][x].char == WALL):
+            elif self.nodes[j][x].char == WALL:
                 break
 
         # RIGHT
         for k in range(x + 1, x + (BOMB_RANGE + 1)):
-            if (k >= self.width):
+            if k >= self.width:
                 break
-            if (self.is_valid_target(k, y)):
+            if self.is_valid_target(k, y):
                 self.destroy(k, y)
-            elif (self.nodes[y][k].char == WALL):
+            elif self.nodes[y][k].char == WALL:
                 break
 
         # LEFT
         for m in range(x - 1, x - (BOMB_RANGE + 1), -1):
-            if (m < 0):
+            if m < 0:
                 break
-            if (self.is_valid_target(m, y)):
+            if self.is_valid_target(m, y):
                 self.destroy(m, y)
-            elif (self.nodes[y][m].char == WALL):
+            elif self.nodes[y][m].char == WALL:
                 break
 
     # score = number of targets destroyed
@@ -116,38 +116,38 @@ class Grid:
 
         # BOTTOM
         for i in range(y + 1, y + (BOMB_RANGE + 1)):
-            if (i >= self.height):
+            if i >= self.height:
                 break
-            if (self.is_valid_target(x, i)):
+            if self.is_valid_target(x, i):
                 score += 1
-            elif (self.nodes[i][x].char == WALL):
+            elif self.nodes[i][x].char == WALL:
                 break
 
         # TOP
         for j in range(y - 1, y - (BOMB_RANGE + 1), -1):
-            if (j < 0):
+            if j < 0:
                 break
-            if (self.is_valid_target(x, j)):
+            if self.is_valid_target(x, j):
                 score += 1
-            elif (self.nodes[j][x].char == WALL):
+            elif self.nodes[j][x].char == WALL:
                 break
 
         # RIGHT
         for k in range(x + 1, x + (BOMB_RANGE + 1)):
-            if (k >= self.width):
+            if k >= self.width:
                 break
-            if (self.is_valid_target(k, y)):
+            if self.is_valid_target(k, y):
                 score += 1
-            elif (self.nodes[y][k].char == WALL):
+            elif self.nodes[y][k].char == WALL:
                 break
 
         # LEFT
         for m in range(x - 1, x - (BOMB_RANGE + 1), -1):
-            if (m < 0):
+            if m < 0:
                 break
-            if (self.is_valid_target(m, y)):
+            if self.is_valid_target(m, y):
                 score += 1
-            elif (self.nodes[y][m].char == WALL):
+            elif self.nodes[y][m].char == WALL:
                 break
 
         return score
@@ -180,13 +180,13 @@ class VoxCodei:
         node = self.grid.pick_bomb_placement()
 
         # simulate everything fox max, if it doesn't work out, backtrack
-        if (node is not None and self.round == 1):
-            if (not self.simulate_turn(node.x, node.y)):
+        if node is not None and self.round == 1:
+            if not self.simulate_turn(node.x, node.y):
                 node.invalid = True
                 node = self.grid.pick_bomb_placement()
 
         # validate bomb placement for next turn
-        if (node is None or node.char != EMPTY):
+        if node is None or node.char != EMPTY:
             print("WAIT")  # wait until it gets destroyed
         else:
             self.grid.place_bomb(node.x, node.y)
@@ -200,15 +200,15 @@ class VoxCodei:
         grid_copy = copy.deepcopy(self.grid)
         current = grid_copy.nodes[y][x]
 
-        while (bombs != 0 and rounds != 0 and not grid_copy.is_destroyed()):
-            if (current is not None and current.char == EMPTY):
+        while bombs != 0 and rounds != 0 and not grid_copy.is_destroyed():
+            if current is not None and current.char == EMPTY:
                 grid_copy.place_bomb(current.x, current.y)
                 bombs -= 1
             grid_copy.update()
             rounds -= 1
             current = grid_copy.pick_bomb_placement()
 
-        while (rounds != 0 and not grid_copy.is_destroyed()):
+        while rounds != 0 and not grid_copy.is_destroyed():
             grid_copy.update()
             rounds -= 1
 

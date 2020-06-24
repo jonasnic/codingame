@@ -33,11 +33,11 @@ for (let i = 0; i < nbWords; ++i) {
 
   // calculate the total score for one word
   for (let j = 0; j < entry.length; ++j) {
-    let char = entry[j];
-    let includes = letters2.includes(char);
+    let character = entry[j];
+    let includes = letters2.includes(character);
     if (includes) {
-      letters2 = letters2.replace(char, ""); // remove the letter
-      currentScore += getScore(char);
+      letters2 = letters2.replace(character, ""); // remove the letter
+      currentScore += getScore(character);
     } else {
       isValid = false; // unavailable letter
     } // else
