@@ -1,15 +1,15 @@
 if __name__ == "__main__":
-    width = int(input())
-    height = int(input())
-    text = input().upper()
+    width: int = int(input())
+    height: int = int(input())
+    text: str = input().upper()
     for _ in range(height):
-        row = input()
-        output = ""
+        row: str = input()
+        output: str = ""
         for character in text:
-            position = ord(character) - ord('A')
+            position: int = ord(character) - ord('A')
             if position < 0 or position > 25:
                 position = 26
-            start = position * width
-            end = start + width
+            start: int = position * width
+            end: int = start + width
             output += row[start:end]
         print(output)

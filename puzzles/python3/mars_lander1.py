@@ -1,5 +1,5 @@
 if __name__ == "__main__":
-    surface_n = int(input())
+    surface_n: int = int(input())
     for _ in range(surface_n):
         land_x, land_y = map(int, input().split())
 

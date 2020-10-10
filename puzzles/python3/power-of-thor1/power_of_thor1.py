@@ -3,7 +3,7 @@ if __name__ == "__main__":
 
     # game loop
     while True:
-        direction = ""
+        direction: str = ""
 
         if thor_y > light_y:
             direction += "N"
