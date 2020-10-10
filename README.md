@@ -13,7 +13,7 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 ### Easy Puzzles
 | Title | Solution(s) | Topic(s) |
 | :---: | :------: | :------: |
-| Onboarding | [Python](./puzzles/python3/onboarding/onboarding.py) &starf;, [Java](./puzzles/java/onboarding/Player.java), [JavaScript](./puzzles/js/onboarding.js), [C++](./puzzles/cpp/onboarding.cpp) | Variables, Input/Output, Conditions |
+| Onboarding | [Python](./puzzles/python3/onboarding.py) &starf;, [Java](./puzzles/java/onboarding/Player.java), [JavaScript](./puzzles/js/onboarding.js), [C++](./puzzles/cpp/onboarding.cpp) | Variables, Input/Output, Conditions |
 | The Descent | [Python](./puzzles/python3/the-descent) &starf;, [Java](./puzzles/java/the-descent/Player.java), [Kotlin](./puzzles/kotlin/src/the-descent.kt), [TypeScript](./puzzles/ts/the-descent/the-descent.ts), [C++](./puzzles/cpp/the-descent.cpp) | Conditions, Loops |
 | Power of Thor - Episode 1 | [Python](./puzzles/python3/power-of-thor1) &starf;, [Kotlin](./puzzles/kotlin/src/power-of-thor1.kt), [JavaScript](./puzzles/js/power-of-thor1.js), [TypeScript](./puzzles/ts/power-of-thor1/power-of-thor1.ts), [C++](./puzzles/cpp/power-of-thor1.cpp) | Conditions |
 | Temperatures | [Python](./puzzles/python3/temperatures) &starf;, [Kotlin](./puzzles/kotlin/src/temperatures.kt), [JavaScript](./puzzles/js/temperatures.js), [TypeScript](./puzzles/ts/temperatures/temperatures.ts), [C++](./puzzles/cpp/temperatures.cpp) | Arrays, Absolute Values |
