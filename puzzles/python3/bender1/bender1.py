@@ -1,42 +1,47 @@
-STRONG_WALL_SYMBOL = "#"
-WEAK_WALL_SYMBOL = "X"
-START_SYMBOL = "@"
-FINISH_SYMBOL = "$"
-SOUTH_SYMBOL = "S"
-EAST_SYMBOL = "E"
-NORTH_SYMBOL = "N"
-WEST_SYMBOL = "W"
-BEER_SYMBOL = "B"
-INVERTER_SYMBOL = "I"
-TELEPORTER_SYMBOL = "T"
-EMPTY_SYMBOL = " "
+from typing import List, Optional, Tuple
 
-SOUTH = "SOUTH"
-EAST = "EAST"
-NORTH = "NORTH"
-WEST = "WEST"
+
+Position = Tuple[int, int]
+
+STRONG_WALL_SYMBOL: str = "#"
+WEAK_WALL_SYMBOL: str = "X"
+START_SYMBOL: str = "@"
+FINISH_SYMBOL: str = "$"
+SOUTH_SYMBOL: str = "S"
+EAST_SYMBOL: str = "E"
+NORTH_SYMBOL: str = "N"
+WEST_SYMBOL: str = "W"
+BEER_SYMBOL: str = "B"
+INVERTER_SYMBOL: str = "I"
+TELEPORTER_SYMBOL: str = "T"
+EMPTY_SYMBOL: str = " "
+
+SOUTH: str = "SOUTH"
+EAST: str = "EAST"
+NORTH: str = "NORTH"
+WEST: str = "WEST"
 
 
 class Cell:
-    def __init__(self, symbol):
+    def __init__(self, symbol: str):
         self.symbol = symbol
         self.reset()
 
     def reset(self):
-        self.prev_bender_reverse_state = None
-        self.prev_bender_break_mode_state = None
-        self.prev_bender_direction = None
+        self.prev_bender_reverse_state: Optional[str] = None
+        self.prev_bender_break_mode_state: Optional[str] = None
+        self.prev_bender_direction: Optional[str] = None
 
 
 class Bender:
     def __init__(self):
-        self.priorities = [SOUTH, EAST, NORTH, WEST]
-        self.reverse_state = False
-        self.break_mode_state = False
-        self.direction = SOUTH
-        self.x = 0
-        self.y = 0
-        self.moves = []
+        self.priorities: List[str] = [SOUTH, EAST, NORTH, WEST]
+        self.reverse_state: bool = False
+        self.break_mode_state: bool = False
+        self.direction: str = SOUTH
+        self.x: int = 0
+        self.y: int = 0
+        self.moves: List[str] = []
 
     def move(self):
         if self.direction == SOUTH:
@@ -45,23 +50,23 @@ class Bender:
             self.x += 1
         elif self.direction == NORTH:
             self.y -= 1
-        else:  # WEST
+        elif self.direction == WEST:
             self.x -= 1
         self.moves.append(self.direction)
 
 
 class Game:
     def __init__(self):
-        self.grid = []
-        self.grid_height = 0
-        self.grid_width = 0
-        self.bender = Bender()
-        self.teleporter1 = None
-        self.teleporter2 = None
-        self.loop = False
+        self.grid: List[List[Cell]] = []
+        self.grid_height: int = 0
+        self.grid_width: int = 0
+        self.bender: Bender = Bender()
+        self.teleporter1: Position = None
+        self.teleporter2: Position = None
+        self.loop: bool = False
 
     @property
-    def current_symbol(self):
+    def current_symbol(self) -> str:
         return self.grid[self.bender.y][self.bender.x].symbol
 
     def reset_grid_state(self):
@@ -69,25 +74,23 @@ class Game:
             for x in range(self.grid_width):
                 self.grid[y][x].reset()
 
-    def is_valid_move(self, direction):
+    def is_valid_move(self, direction: str) -> bool:
         if direction == SOUTH:
             return self.is_valid_position(self.bender.x, self.bender.y + 1)
         elif direction == EAST:
             return self.is_valid_position(self.bender.x + 1, self.bender.y)
         elif direction == NORTH:
             return self.is_valid_position(self.bender.x, self.bender.y - 1)
-        else:  # WEST
+        elif direction == WEST:
             return self.is_valid_position(self.bender.x - 1, self.bender.y)
 
-    def is_valid_position(self, x, y):
-        symbol = self.grid[y][x].symbol
-        x_is_valid = x >= 0 and x < self.grid_width
-        y_is_valid = y >= 0 and y < self.grid_height
-        symbol_is_valid = all([
-            symbol != STRONG_WALL_SYMBOL,
-            symbol != WEAK_WALL_SYMBOL or self.bender.break_mode_state
+    def is_valid_position(self, x: int, y: int) -> bool:
+        symbol: str = self.grid[y][x].symbol
+        return all([
+            x >= 0 and x < self.grid_width,
+            y >= 0 and y < self.grid_height,
+            symbol != STRONG_WALL_SYMBOL and (symbol != WEAK_WALL_SYMBOL or self.bender.break_mode_state),
         ])
-        return x_is_valid and y_is_valid and symbol_is_valid
 
     def update_bender_state(self):
         if self.current_symbol == SOUTH_SYMBOL:
@@ -106,7 +109,7 @@ class Game:
         elif self.current_symbol == TELEPORTER_SYMBOL:
             if (self.bender.x, self.bender.y) == self.teleporter1:
                 self.bender.x, self.bender.y = self.teleporter2
-            else:
+            elif (self.bender.x, self.bender.y) == self.teleporter2:
                 self.bender.x, self.bender.y = self.teleporter1
 
     def move_bender(self):
@@ -121,17 +124,9 @@ class Game:
         else:
             self.bender.move()
 
-        cell = self.grid[self.bender.y][self.bender.x]
-        cell_state = (
-            cell.prev_bender_reverse_state,
-            cell.prev_bender_break_mode_state,
-            cell.prev_bender_direction
-        )
-        bender_state = (
-            self.bender.reverse_state,
-            self.bender.break_mode_state,
-            self.bender.direction
-        )
+        cell: Cell = self.grid[self.bender.y][self.bender.x]
+        cell_state = (cell.prev_bender_reverse_state, cell.prev_bender_break_mode_state, cell.prev_bender_direction)
+        bender_state = (self.bender.reverse_state, self.bender.break_mode_state, self.bender.direction)
         if cell_state != bender_state:
             cell.prev_bender_reverse_state = self.bender.reverse_state
             cell.prev_bender_break_mode_state = self.bender.break_mode_state
@@ -144,10 +139,10 @@ def read_input_data(game):
     game.grid_height, game.grid_width = map(int, input().split())
 
     for y in range(game.grid_height):
-        row = input()
-        cell_list = []
+        row: str = input()
+        cell_list: List[Cell] = []
         for x, symbol in enumerate(row):
-            cell = Cell(symbol)
+            cell: Cell = Cell(symbol)
             cell_list.append(cell)
             if symbol == START_SYMBOL:
                 game.bender.x = x
@@ -155,13 +150,13 @@ def read_input_data(game):
             elif symbol == TELEPORTER_SYMBOL:
                 if game.teleporter1 is None:
                     game.teleporter1 = (x, y)
-                else:
+                elif game.teleporter2 is None:
                     game.teleporter2 = (x, y)
         game.grid.append(cell_list)
 
 
 if __name__ == "__main__":
-    game = Game()
+    game: Game = Game()
     read_input_data(game)
 
     while game.current_symbol != FINISH_SYMBOL:

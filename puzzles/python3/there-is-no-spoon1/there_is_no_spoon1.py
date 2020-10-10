@@ -1,10 +1,13 @@
-if __name__ == "__main__":
-    EMPTY = '.'
-    NODE = '0'
-    grid = []
+from typing import List
 
-    width = int(input())  # the number of cells on the X axis
-    height = int(input())  # the number of cells on the Y axis
+
+if __name__ == "__main__":
+    EMPTY: str = '.'
+    NODE: str = '0'
+    grid: List[str] = []
+
+    width: int = int(input())  # the number of cells on the X axis
+    height: int = int(input())  # the number of cells on the Y axis
     for _ in range(height):
         grid.append(input())
 
@@ -12,14 +15,14 @@ if __name__ == "__main__":
         for x in range(width):
             if grid[y][x] == NODE:
                 # node
-                output = "{} {} ".format(x, y)
+                output = f"{x} {y} "
 
                 # right neighbor
                 neighbor = EMPTY
                 for neighbor_x in range(x + 1, width):
                     neighbor = grid[y][neighbor_x]
                     if neighbor == NODE:
-                        output += "{} {} ".format(neighbor_x, y)
+                        output += f"{neighbor_x} {y} "
                         break
 
                 if neighbor == EMPTY:
@@ -30,7 +33,7 @@ if __name__ == "__main__":
                 for neighbor_y in range(y + 1, height):
                     neighbor = grid[neighbor_y][x]
                     if neighbor == NODE:
-                        output += "{} {} ".format(x, neighbor_y)
+                        output += f"{x} {neighbor_y} "
                         break
 
                 if neighbor == EMPTY:

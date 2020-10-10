@@ -1,13 +1,18 @@
 import re
 from collections import deque
 from functools import total_ordering
+from typing import Dict, Tuple
 
 
 @total_ordering
 class Card:
-    def __init__(self, value, suit):
-        self.value = value
-        self.suit = suit
+    MAPPING: Dict[str, int] = {
+        "2": 2, "3": 3, "4": 4, "5": 5, "6": 6, "7": 7, "8": 8, "9": 9, "10": 10, "J": 11, "Q": 12, "K": 13, "A": 14
+    }
+
+    def __init__(self, value: str, suit: str):
+        self.value: str = value
+        self.suit: str = suit
 
     def __eq__(self, other):
         return self.value == other.value
@@ -16,71 +21,69 @@ class Card:
         return not (self == other)
 
     def __lt__(self, other):
-        dictionary = {"2": 2, "3": 3, "4": 4, "5": 5, "6": 6, "7": 7, "8": 8, "9": 9, "10": 10, "J": 11, "Q": 12, "K": 13, "A": 14}
-        return dictionary[self.value] < dictionary[other.value]
+        return self.MAPPING[self.value] < self.MAPPING[other.value]
 
     def __repr__(self):
         return str(self.value) + self.suit
 
 
 class Player:
-    def __init__(self, player_number):
-        self.player_number = player_number
-        self.deck = deque()
+    def __init__(self, player_number: int):
+        self.player_number: int = player_number
+        self.deck: deque[Card] = deque()
 
-    @property
-    def has_empty_deck(self):
+    def has_empty_deck(self) -> bool:
         return len(self.deck) == 0
 
 
-def read_player_input(player_number):
-    card_pattern = r"([\dJQKA]+)([DHCS])"
-    player = Player(player_number)
-    nb_cards = int(input())
+def read_player_input(player_number: int) -> Player:
+    card_pattern: str = r"([\dJQKA]+)([DHCS])"
+    player: Player = Player(player_number)
+    nb_cards: int = int(input())
     for _ in range(nb_cards):
-        line = input()
+        line: str = input()
         value, suit = re.findall(card_pattern, line)[0]
-        card = Card(value, suit)
+        card: Card = Card(value, suit)
         player.deck.append(card)
     return player
 
 
-def read_game_input():
-    player1 = read_player_input(1)
-    player2 = read_player_input(2)
+def read_game_input() -> Tuple[Player, Player]:
+    player1: Player = read_player_input(1)
+    player2: Player = read_player_input(2)
     return player1, player2
 
 
-def get_game_result(player1, player2, nb_rounds):
-    if player1.has_empty_deck:
-        return str(player2.player_number) + ' ' + str(nb_rounds)
-    elif player2.has_empty_deck:
-        return str(player1.player_number) + ' ' + str(nb_rounds)
+def get_game_result(player1: Player, player2: Player, nb_rounds: int) -> str:
+    if player1.has_empty_deck():
+        return f"{player2.player_number} {nb_rounds}"
+    elif player2.has_empty_deck():
+        return f"{player1.player_number} {nb_rounds}"
     else:
         return "PAT"
 
 
-def play_game(player1, player2):
-    nb_rounds = 0
-    deck_index = 0
+def play_game(player1: Player, player2: Player) -> str:
+    nb_rounds: int = 0
+    deck_index: int = 0
 
     while True:
         if len(player1.deck) <= deck_index or len(player2.deck) <= deck_index:
             break
-        player1_card = player1.deck[deck_index]
-        player2_card = player2.deck[deck_index]
-        n = deck_index + 1
+        player1_card: Card = player1.deck[deck_index]
+        player2_card: Card = player2.deck[deck_index]
+        n: int = deck_index + 1
 
         if player1_card > player2_card:
             player1.deck.rotate(-n)
-            cards = deque()
+            cards: deque[Card] = deque()
             for _ in range(n):
                 cards.append(player2.deck.popleft())
             player1.deck.extend(cards)
             nb_rounds += 1
             deck_index = 0
         elif player1_card < player2_card:
-            cards = deque()
+            cards: deque[Card] = deque()
             for _ in range(n):
                 cards.append(player1.deck.popleft())
             player2.deck.extend(cards)

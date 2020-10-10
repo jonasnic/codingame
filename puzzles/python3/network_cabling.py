@@ -1,8 +1,11 @@
+from typing import List
+
+
 if __name__ == "__main__":
-    nb_buildings = int(input())
-    y_coordinates = []
-    min_x = float("inf")
-    max_x = 0
+    nb_buildings: int = int(input())
+    y_coordinates: List[int] = []
+    min_x: int = 2 ** 30
+    max_x: int = -2 ** 30
 
     for _ in range(nb_buildings):
         x, y = map(int, input().split())
@@ -13,11 +16,11 @@ if __name__ == "__main__":
             max_x = x
 
     # length of horizontal cable
-    cable_length = max_x - min_x
+    cable_length: int = max_x - min_x
 
     # calculate y median to minimize the length of vertical cable(s)
     y_coordinates.sort()
-    y_median = y_coordinates[nb_buildings // 2]
+    y_median: int = y_coordinates[nb_buildings // 2]
 
     # length of vertical cable(s)
     for y in y_coordinates:
