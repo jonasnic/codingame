@@ -1,7 +1,7 @@
 import re
 from collections import deque
 from functools import total_ordering
-from typing import Dict, Tuple
+from typing import Deque, Dict, Tuple
 
 
 @total_ordering
@@ -30,7 +30,7 @@ class Card:
 class Player:
     def __init__(self, player_number: int):
         self.player_number: int = player_number
-        self.deck: deque[Card] = deque()
+        self.deck: Deque[Card] = deque()
 
     def has_empty_deck(self) -> bool:
         return len(self.deck) == 0
@@ -76,14 +76,14 @@ def play_game(player1: Player, player2: Player) -> str:
 
         if player1_card > player2_card:
             player1.deck.rotate(-n)
-            cards: deque[Card] = deque()
+            cards: Deque[Card] = deque()
             for _ in range(n):
                 cards.append(player2.deck.popleft())
             player1.deck.extend(cards)
             nb_rounds += 1
             deck_index = 0
         elif player1_card < player2_card:
-            cards: deque[Card] = deque()
+            cards: Deque[Card] = deque()
             for _ in range(n):
                 cards.append(player1.deck.popleft())
             player2.deck.extend(cards)
