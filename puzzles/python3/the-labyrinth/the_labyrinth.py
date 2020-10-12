@@ -1,5 +1,8 @@
 from collections import deque
+from typing import Deque, Dict, List, Set, Tuple
 
+
+Position = Tuple[int, int]
 
 # Kirk's Possible Moves
 UP = "UP"
@@ -16,13 +19,13 @@ UNKNOWN = '?'
 
 
 class Game:
-    def __init__(self, height, width):
-        self.maze_explored = False
-        self.control_room_reached = False
-        self.height = height
-        self.width = width
-        self.maze = []
-        self.kirk_position = (0, 0)  # (x, y)
+    def __init__(self, height: int, width: int):
+        self.maze_explored: bool = False
+        self.control_room_reached: bool = False
+        self.height: int = height
+        self.width: int = width
+        self.maze: List[str] = []
+        self.kirk_position: Position = (0, 0)  # (x, y)
 
     def loop(self):
         while True:
@@ -30,7 +33,7 @@ class Game:
             self.kirk_position = (kirk_x, kirk_y)
             self.maze = []
             for y in range(height):
-                row = input()
+                row: str = input()
                 self.maze.append(row)
                 for x, c in enumerate(row):
                     if c == CONTROL_ROOM and (x, y) == self.kirk_position:
@@ -40,31 +43,31 @@ class Game:
     def play(self):
         came_from, neighbor = None, None
         if not self.maze_explored:
-            to_avoid = [WALL, CONTROL_ROOM]
+            to_avoid: Tuple[str] = (WALL, CONTROL_ROOM)
             came_from, neighbor = self.bfs(UNKNOWN, to_avoid)
-            if came_from is None:
+            if not came_from:
                 self.maze_explored = True
         if self.maze_explored:
-            to_avoid = [WALL]
+            to_avoid: Tuple[str] = (WALL)
             if not self.control_room_reached:
                 came_from, neighbor = self.bfs(CONTROL_ROOM, to_avoid)
             else:
                 came_from, neighbor = self.bfs(START, to_avoid)
 
-        path = self.reconstruct_path(came_from, neighbor)
+        path: List[Position] = self.reconstruct_path(came_from, neighbor)
         next_position = path[-2]
         self.print_next_move(next_position)
 
-    def bfs(self, goal, to_avoid):
+    def bfs(self, goal: str, to_avoid: Tuple[str]) -> Tuple[Dict[Position, Position], Position]:
         """Compute the shortest path between Kirk and the goal with BFS."""
-        visited = set()
-        queue = deque()
-        came_from = {}  # position => parent position on the shortest path
+        visited: Set[Position] = set()
+        queue: Deque[Position] = deque()
+        came_from: Dict[Position, Position] = {}  # position => parent position on the shortest path
         queue.append(self.kirk_position)
         visited.add(self.kirk_position)
 
         while len(queue) != 0:
-            position = queue.popleft()
+            position: Position = queue.popleft()
             for neighbor in self.neighbors(position, to_avoid):
                 if neighbor not in visited:
                     visited.add(neighbor)
@@ -76,8 +79,8 @@ class Game:
 
         return (None, None)
 
-    def neighbors(self, position, to_avoid):
-        neighbors = []
+    def neighbors(self, position: Position, to_avoid: Tuple[str]) -> List[Position]:
+        neighbors: List[Position] = []
         x, y = position
         if x > 0:
             self.add_neighbor(to_avoid, neighbors, x - 1, y)
@@ -89,20 +92,20 @@ class Game:
             self.add_neighbor(to_avoid, neighbors, x, y + 1)
         return neighbors
 
-    def add_neighbor(self, to_avoid, neighbors, x, y):
+    def add_neighbor(self, to_avoid: Tuple[str], neighbors: List[Position], x, y):
         if self.maze[y][x] not in to_avoid:
             neighbors.append((x, y))
 
-    def reconstruct_path(self, came_from, neighbor):
-        current_position = neighbor
-        stack = []
+    def reconstruct_path(self, came_from: Dict[Position, Position], neighbor: Position) -> List[Position]:
+        current_position: Position = neighbor
+        stack: List[Position] = []
         while current_position in came_from:
             stack.append(current_position)
             current_position = came_from[current_position]
         stack.append(current_position)
         return stack
 
-    def print_next_move(self, next_position):
+    def print_next_move(self, next_position: Position):
         kirk_x, kirk_y = self.kirk_position
         next_x, next_y = next_position
         if kirk_x < next_x:
@@ -111,11 +114,11 @@ class Game:
             print(LEFT)
         elif kirk_y < next_y:
             print(DOWN)
-        else:
+        elif kirk_y > next_y:
             print(UP)
 
 
 if __name__ == "__main__":
     height, width, _ = map(int, input().split())
-    game = Game(height, width)
+    game: Game = Game(height, width)
     game.loop()
