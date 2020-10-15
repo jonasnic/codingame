@@ -1,18 +1,19 @@
 class CGXFormatter:
     def __init__(self):
-        self.BASE_INDENT = 4
-        self.inside_string = False
-        self.total_indent = 0
-        self.new_line = True
+        self.BASE_INDENT: int = 4
+        self.inside_string: bool = False
+        self.total_indent: int = 0
+        self.new_line: bool = True
+        self.nb_lines: int = 0
 
     def read_lines(self):
         self.nb_lines = int(input())
         for _ in range(self.nb_lines):
-            line = input()
+            line: str = input()
             for character in line:
                 self.read_char(character)
 
-    def read_char(self, character):
+    def read_char(self, character: str):
         if self.inside_string:
             if character == '\'':
                 self.inside_string = False
@@ -20,7 +21,7 @@ class CGXFormatter:
         else:
             self.read_char_outside_string(character)
 
-    def read_char_outside_string(self, character):
+    def read_char_outside_string(self, character: str):
         if character == ' ' or character == '\t':
             return
         if character == '\'':
@@ -43,7 +44,7 @@ class CGXFormatter:
         else:
             self.print_char(character)
 
-    def print_char(self, character):
+    def print_char(self, character: str):
         if self.new_line:
             for _ in range(self.total_indent):
                 print(' ', end='')
