@@ -1,4 +1,3 @@
-import statistics
 from typing import List
 
 

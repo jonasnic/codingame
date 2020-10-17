@@ -2,16 +2,16 @@ import heapq
 from typing import List
 
 
-EXIT_NUMBER: int = -1  # room number for the exit
-START_NUMBER: int = 0  # index of the start room
+EXIT_NUMBER = -1  # room number for the exit
+START_NUMBER = 0  # index of the start room
 
 
 class Room:
     """Each room is a node of the tree"""
     def __init__(self, number: int, money: int, door1: str, door2: str):
-        self.number: int = number
-        self.money: int = money
-        self.depth: int = -1
+        self.number = number
+        self.money = money
+        self.depth = -1
         self.doors: List[int] = []
         self.read_door(door1)
         self.read_door(door2)
@@ -33,10 +33,10 @@ class Building:
         self.rooms: List[Room] = []
 
     def read_rooms(self):
-        nb_rooms: int = int(input())
+        nb_rooms = int(input())
         for _ in range(nb_rooms):
             number, money, door1, door2 = input().split()
-            room: Room = Room(int(number), int(money), door1, door2)
+            room = Room(int(number), int(money), door1, door2)
             self.rooms.append(room)
 
     def max_money(self) -> int:
@@ -50,18 +50,17 @@ class Building:
         # loop through each depth level of the tree in descending order
         while unvisited:
             # pick the room with the max depth
-            max_room: Room = heapq.heappop(unvisited)
-            max_number: int = max_room.number
+            max_room = heapq.heappop(unvisited)
             # find the best path for each subproblem
-            next_number = self.next_door(max_number, money)
-            money[max_number] = max_room.money
+            next_number = self.next_door(max_room.number, money)
+            money[max_room.number] = max_room.money
             if next_number != EXIT_NUMBER:
-                money[max_number] += money[next_number]
+                money[max_room.number] += money[next_number]
         return money[START_NUMBER]
 
-    def next_door(self, max_number: int, money: int) -> int:
-        door1: int = self.rooms[max_number].doors[0]
-        door2: int = self.rooms[max_number].doors[1]
+    def next_door(self, max_number: int, money: List[int]) -> int:
+        door1 = self.rooms[max_number].doors[0]
+        door2 = self.rooms[max_number].doors[1]
         if door1 == EXIT_NUMBER:
             return door2
         if door2 == EXIT_NUMBER:
@@ -73,16 +72,16 @@ class Building:
 
 
 def calc_max_depth(building: Building, room: Room, parent_depth: int):
-    room.depth: int = parent_depth + 1
+    room.depth = parent_depth + 1
     for door in room.doors:
         if door != EXIT_NUMBER:
-            neighbor: Room = building.rooms[door]
+            neighbor = building.rooms[door]
             if neighbor.depth <= room.depth:
                 calc_max_depth(building, neighbor, room.depth)
 
 
 if __name__ == "__main__":
-    building: Building = Building()
+    building = Building()
     building.read_rooms()
     # Calculate the max depth of each room reachable from the start with DFS
     calc_max_depth(building, building.rooms[START_NUMBER], -1)

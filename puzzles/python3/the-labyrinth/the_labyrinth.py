@@ -1,5 +1,5 @@
 from collections import deque
-from typing import Deque, Dict, List, Set, Tuple
+from typing import Deque, Dict, List, Optional, Set, Tuple
 
 
 Position = Tuple[int, int]
@@ -20,10 +20,10 @@ UNKNOWN = '?'
 
 class Game:
     def __init__(self, height: int, width: int):
-        self.maze_explored: bool = False
-        self.control_room_reached: bool = False
-        self.height: int = height
-        self.width: int = width
+        self.maze_explored = False
+        self.control_room_reached = False
+        self.height = height
+        self.width = width
         self.maze: List[str] = []
         self.kirk_position: Position = (0, 0)  # (x, y)
 
@@ -33,7 +33,7 @@ class Game:
             self.kirk_position = (kirk_x, kirk_y)
             self.maze = []
             for y in range(height):
-                row: str = input()
+                row = input()
                 self.maze.append(row)
                 for x, c in enumerate(row):
                     if c == CONTROL_ROOM and (x, y) == self.kirk_position:
@@ -58,7 +58,7 @@ class Game:
         next_position = path[-2]
         self.print_next_move(next_position)
 
-    def bfs(self, goal: str, to_avoid: Tuple[str]) -> Tuple[Dict[Position, Position], Position]:
+    def bfs(self, goal: str, to_avoid: Tuple[str]) -> Tuple[Optional[Dict[Position, Position]], Optional[Position]]:
         """Compute the shortest path between Kirk and the goal with BFS."""
         visited: Set[Position] = set()
         queue: Deque[Position] = deque()
@@ -84,11 +84,11 @@ class Game:
         x, y = position
         if x > 0:
             self.add_neighbor(to_avoid, neighbors, x - 1, y)
-        if x < (self.width - 1):
+        if x < self.width - 1:
             self.add_neighbor(to_avoid, neighbors, x + 1, y)
         if y > 0:
             self.add_neighbor(to_avoid, neighbors, x, y - 1)
-        if y < (self.height - 1):
+        if y < self.height - 1:
             self.add_neighbor(to_avoid, neighbors, x, y + 1)
         return neighbors
 
@@ -120,5 +120,5 @@ class Game:
 
 if __name__ == "__main__":
     height, width, _ = map(int, input().split())
-    game: Game = Game(height, width)
+    game = Game(height, width)
     game.loop()

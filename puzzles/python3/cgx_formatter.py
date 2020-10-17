@@ -1,15 +1,15 @@
 class CGXFormatter:
     def __init__(self):
-        self.BASE_INDENT: int = 4
-        self.inside_string: bool = False
-        self.total_indent: int = 0
-        self.new_line: bool = True
-        self.nb_lines: int = 0
+        self.BASE_INDENT = 4
+        self.inside_string = False
+        self.total_indent = 0
+        self.new_line = True
+        self.nb_lines = 0
 
     def read_lines(self):
         self.nb_lines = int(input())
         for _ in range(self.nb_lines):
-            line: str = input()
+            line = input()
             for character in line:
                 self.read_char(character)
 
