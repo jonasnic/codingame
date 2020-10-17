@@ -7,10 +7,10 @@ if __name__ == "__main__":
     The inputs you are given are automatically updated according to your last actions.
     """
     while True:
-        index_to_fire: int = 0
-        max_mountain_height: int = -1
+        index_to_fire = 0
+        max_mountain_height = -1
         for index in range(8):
-            mountain_height: int = int(input())
+            mountain_height = int(input())
             if mountain_height > max_mountain_height:
                 max_mountain_height = mountain_height
                 index_to_fire = index

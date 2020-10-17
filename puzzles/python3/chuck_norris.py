@@ -1,13 +1,13 @@
-def to_binary(text: str) -> str:
-    binary_text: str = ""
+def to_binary(text) -> str:
+    binary_text = ""
     for character in text:
         binary_text += "{0:{fill}7b}".format(ord(character), fill="0")
     return binary_text
 
 
-def to_unary(text: str) -> str:
-    unary_text: str = ""
-    prev_digit: bool = False  # False = 0, True = 1
+def to_unary(text) -> str:
+    unary_text = ""
+    prev_digit = False  # False = 0, True = 1
     # handle first character
     if len(text) >= 1:
         if text[0] == "0":
@@ -29,8 +29,7 @@ def to_unary(text: str) -> str:
 
 
 if __name__ == "__main__":
-    text: str = input()
-    binary_text: str = to_binary(text)
-    unary_text: str = to_unary(binary_text)
-
+    text = input()
+    binary_text = to_binary(text)
+    unary_text = to_unary(binary_text)
     print(unary_text)
