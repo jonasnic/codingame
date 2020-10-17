@@ -1,16 +1,16 @@
 if __name__ == "__main__":
     width, height = map(int,  input().split())
-    nb_turns: int = int(input())
+    nb_turns = int(input())
     x, y = map(int, input().split())
 
-    min_x: int = 0
-    max_x: int = width - 1
-    min_y: int = 0
-    max_y: int = height - 1
+    min_x = 0
+    max_x = width - 1
+    min_y = 0
+    max_y = height - 1
 
     # game loop
     while True:
-        bomb_dir: str = input()
+        bomb_dir = input()
 
         if bomb_dir == "U":
             max_y = y - 1
@@ -37,7 +37,7 @@ if __name__ == "__main__":
             max_x = x - 1
             max_y = y - 1
 
-        x: int = int((min_x + max_x) / 2)
-        y: int = int((min_y + max_y) / 2)
+        x = int((min_x + max_x) / 2)
+        y = int((min_y + max_y) / 2)
         # the location of the next window Batman should jump to.
         print(f"{x} {y}")

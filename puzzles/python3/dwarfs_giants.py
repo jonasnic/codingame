@@ -4,7 +4,7 @@ from typing import Dict, Set
 class Node:
     def __init__(self):
         self.children: Set[int] = set()
-        self.depth: int = 0
+        self.depth = 0
 
 
 class Graph:
@@ -12,7 +12,7 @@ class Graph:
         self.nodes: Dict[int, Node] = {}  # node_id => node
 
     def build(self):
-        nb_edges: int = int(input())  # the number of relationships of influence
+        nb_edges = int(input())  # the number of relationships of influence
         for _ in range(nb_edges):
             parent_id, child_id = map(int, input().split())
 
@@ -32,7 +32,7 @@ class Graph:
 
     def solve(self) -> int:
         """Returns the number of people involved in the longest succession of influences."""
-        max_depth: int = 0
+        max_depth = 0
         for node in self.nodes.values():
             self.traverse(node)
         for node in self.nodes.values():

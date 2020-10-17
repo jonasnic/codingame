@@ -13,9 +13,10 @@ if __name__ == "__main__":
 
     # game loop
     while True:
-        clone_floor, clone_pos, direction = input().split()
-        clone_floor: int = int(clone_floor)
-        clone_pos: int = int(clone_pos)
+        line = input().split()
+        clone_floor = int(line[0])
+        clone_pos = int(line[1])
+        direction = line[2]
         if clone_floor == -1:
             print("WAIT")
         elif direction == "LEFT" and clone_pos < elevators[clone_floor]:

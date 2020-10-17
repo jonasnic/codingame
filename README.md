@@ -37,7 +37,7 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 | Network Cabling | [Python](./puzzles/python3/network_cabling.py) &starf; | Sorting, Median |
 | Conway Sequence | [Python](./puzzles/python3/conway_sequence.py), [Kotlin](./puzzles/kotlin/src/conway-sequence.kt), [JavaScript](./puzzles/js/conway-sequence.js), [Haskell](./puzzles/haskell/conway-sequence) &starf; | Sequences |
 | Telephone Numbers | [Python](./puzzles/python3/telephone_numbers.py) &starf; | Tries |
-| Dwarfs standing on the shoulders of giants | [Python](./puzzles/python3/dwarfs-giants.py) &starf;, [TypeScript](./puzzles/ts/dwarfs-giants) | Graphs, Recursion |
+| Dwarfs standing on the shoulders of giants | [Python](./puzzles/python3/dwarfs_giants.py) &starf;, [TypeScript](./puzzles/ts/dwarfs-giants) | Graphs, Recursion |
 | Bender 1 | [Python](./puzzles/python3/bender1) &starf;, [Kotlin](./puzzles/kotlin/src/bender1.kt) | 2D Arrays, State Machine, Simulation |
 | Scrabble | [Python](./puzzles/python3/scrabble) &starf;, [Kotlin](./puzzles/kotlin/src/scrabble.kt), [JavaScript](./puzzles/js/scrabble.js), [TypeScript](./puzzles/ts/scrabble/scrabble.ts) | Strings, Hash Tables |
 | **Mayan Calculation** | [Python](./puzzles/python3/mayan_calc.py), [Kotlin](./puzzles/kotlin/src/mayan-calc) &starf;, [Ruby](./puzzles/ruby/mayan-calc.rb) | Strings |

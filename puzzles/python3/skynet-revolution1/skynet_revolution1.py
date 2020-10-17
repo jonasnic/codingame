@@ -1,16 +1,20 @@
 from collections import deque
-from typing import Dict, List, Set, Tuple
+from typing import Deque, Dict, Optional, List, Set, Tuple
 
 
-def bfs(graph: Dict[int, Set[int]], gateway: set, agent_node_id: int) -> Tuple[Dict[int, int], int]:
-    visited: set = set()
-    queue: deque = deque()
+def bfs(
+    graph: Dict[int, Set[int]],
+    gateways: Set[int],
+    agent_node_id: int
+) -> Tuple[Optional[Dict[int, int]], Optional[int]]:
+    visited = set()
+    queue: Deque[int] = deque()
     came_from: Dict[int, int] = {}  # node_id => parent node id on the shortest path
     queue.append(agent_node_id)
     visited.add(agent_node_id)
 
-    while len(queue) != 0:
-        node_id: int = queue.popleft()
+    while queue:
+        node_id = queue.popleft()
         for neighbor_id in graph[node_id]:
             if neighbor_id not in visited:
                 visited.add(neighbor_id)
@@ -18,6 +22,8 @@ def bfs(graph: Dict[int, Set[int]], gateway: set, agent_node_id: int) -> Tuple[D
                 came_from[neighbor_id] = node_id
                 if neighbor_id in gateways:
                     return (came_from, neighbor_id)
+
+    return (None, None)
 
 
 def reconstruct_path(graph: Dict[int, Set[int]], came_from: Dict[int, int], neighbor_id: int) -> List[int]:
@@ -34,7 +40,7 @@ def reconstruct_path(graph: Dict[int, Set[int]], came_from: Dict[int, int], neig
 if __name__ == "__main__":
     # read game input
     graph: Dict[int, Set[int]] = {}  # node_id => links
-    gateways: set = set()
+    gateways: Set[int] = set()
     nb_nodes, nb_links, nb_gateways = map(int, input().split())
     for i in range(nb_links):
         # n1 and n2 defines a link between these nodes
@@ -50,11 +56,12 @@ if __name__ == "__main__":
 
     # game loop
     while True:
-        agent_node_id: int = int(input())  # node id on which the Skynet agent is located
+        agent_node_id = int(input())  # node id on which the Skynet agent is located
         came_from, neighbor_id = bfs(graph, gateways, agent_node_id)
-        path: List[int] = reconstruct_path(graph, came_from, neighbor_id)
-        second_node_id: int = path[-2]
-        graph[agent_node_id].remove(second_node_id)
-        graph[second_node_id].remove(agent_node_id)
-        # the indices of the nodes you wish to sever the link between
-        print(f"{agent_node_id} {second_node_id}")
+        if came_from is not None and neighbor_id is not None:
+            path: List[int] = reconstruct_path(graph, came_from, neighbor_id)
+            second_node_id = path[-2]
+            graph[agent_node_id].remove(second_node_id)
+            graph[second_node_id].remove(agent_node_id)
+            # the indices of the nodes you wish to sever the link between
+            print(f"{agent_node_id} {second_node_id}")

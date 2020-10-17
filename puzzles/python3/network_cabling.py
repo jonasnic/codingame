@@ -1,11 +1,12 @@
+import statistics
 from typing import List
 
 
 if __name__ == "__main__":
-    nb_buildings: int = int(input())
+    nb_buildings = int(input())
     y_coordinates: List[int] = []
-    min_x: int = 2 ** 30
-    max_x: int = -2 ** 30
+    min_x = 2 ** 30
+    max_x = -2 ** 30
 
     for _ in range(nb_buildings):
         x, y = map(int, input().split())
@@ -16,7 +17,7 @@ if __name__ == "__main__":
             max_x = x
 
     # length of horizontal cable
-    cable_length: int = max_x - min_x
+    cable_length = max_x - min_x
 
     # calculate y median to minimize the length of vertical cable(s)
     y_coordinates.sort()

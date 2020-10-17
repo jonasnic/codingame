@@ -2,12 +2,12 @@ from typing import List
 
 
 if __name__ == "__main__":
-    EMPTY: str = '.'
-    NODE: str = '0'
+    EMPTY = '.'
+    NODE = '0'
     grid: List[str] = []
 
-    width: int = int(input())  # the number of cells on the X axis
-    height: int = int(input())  # the number of cells on the Y axis
+    width = int(input())  # the number of cells on the X axis
+    height = int(input())  # the number of cells on the Y axis
     for _ in range(height):
         grid.append(input())
 
