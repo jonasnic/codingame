@@ -6,8 +6,8 @@ var links []Link
 var gateways []int
 
 type Link struct {
-	n1 int
-	n2 int
+  n1 int
+  n2 int
 }
 
 func sever(link Link) {
@@ -25,7 +25,7 @@ func block(agentNode int) {
         return
       }
     }
-	}
+  }
   blockFirstLink()
 }
 
