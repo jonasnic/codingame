@@ -1,68 +1,76 @@
-class Link {
-  constructor(node1, node2) {
-    this.node1 = node1;
-    this.node2 = node2;
+function bfs(graph, gateways, agentNodeId) {
+  let visited = new Set();
+  let queue = [];
+  let cameFrom = new Map();  // node id => parent node id on the shortest path
+  queue.push(agentNodeId);
+  visited.add(agentNodeId);
+
+  while (queue.length !== 0) {
+    nodeId = queue.shift();
+    for (let neighborId of graph.get(nodeId)) {
+      if (!visited.has(neighborId)) {
+        visited.add(neighborId);
+        queue.push(neighborId);
+        cameFrom.set(neighborId, nodeId);
+        if (gateways.has(neighborId)) {
+          return [cameFrom, neighborId];
+        }
+      }
+    }
   }
 
-  // sever the link between two nodes
-  slice() {
-    print(this.node1 + ' ' + this.node2);
-  }
-
-  equals(link) {
-    return ((this.node1 === link.node1) && (this.node2 === link.node2)) ||
-           (((this.node1 === link.node2) && (this.node2 === link.node1)));
-  }
+  return [null, null];
 }
 
-let graph = [];
-let gateways = [];
+function reconstructPath(cameFrom, neighborId) {
+  let currentId = neighborId;
+  let stack = [];
 
-const inputs = readline().split(' ');
+  while (cameFrom.has(currentId)) {
+    stack.push(currentId);
+    currentId = cameFrom.get(currentId);
+  }
+  stack.push(currentId);
+  return stack;
+}
+
+
+// read game input
+let graph = new Map(); // node id => links
+let gateways = new Set();
+let inputs = readline().split(' ');
 const nbNodes = parseInt(inputs[0]); // the total number of nodes in the level, including the gateways
 const nbLinks = parseInt(inputs[1]); // the number of links
-const nbExits = parseInt(inputs[2]); // the number of exit gateways
-
-for (let i = 0; i < nbLinks; ++i) {
+const nbGateways = parseInt(inputs[2]); // the number of exit gateways
+for (let i = 0; i < nbLinks; i++) {
   let inputs = readline().split(' ');
-  let N1 = parseInt(inputs[0]); // N1 and N2 defines a link between these nodes
-  let N2 = parseInt(inputs[1]);
-  graph.push(new Link(N1, N2));
-  printErr(graph[i].node1 + ' ' + graph[i].node2);
+  // n1 and n2 defines a link between these nodes
+  const n1 = parseInt(inputs[0]);
+  const n2 = parseInt(inputs[1]);
+  if (!graph.has(n1)) {
+    graph.set(n1, new Set());
+  }
+  if (!graph.has(n2)) {
+    graph.set(n2, new Set());
+  }
+  graph.get(n1).add(n2);
+  graph.get(n2).add(n1);
 }
-
-for (let i = 0; i < nbExits; ++i) {
-  let gateway = parseInt(readline()); // the index of a gateway node
-  gateways.push(gateway);
-  printErr(gateways[i]);
+for (let i = 0; i < nbGateways; i++) {
+  gateways.add(parseInt(readline()));
 }
 
 // game loop
 while (true) {
-  let agentNode = parseInt(readline()); // node index on which the Skynet agent is positioned this turn
-  blockAgent(agentNode);
-}
+  const agentNodeId = parseInt(readline()); // node id on which the Skynet agent is located
+  [cameFrom, neighborId] = bfs(graph, gateways, agentNodeId);
+  if (cameFrom !== null && neighborId !== null) {
+    path = reconstructPath(cameFrom, neighborId);
+    secondNodeId = path[path.length - 2];
+    graph.get(agentNodeId).delete(secondNodeId);
+    graph.get(secondNodeId).delete(agentNodeId);
+  }
 
-function blockAgent(agentNode) {
-  let link = new Link();
-  for (let i = 0; i < gateways.length; ++i) {
-    let gateway = gateways[i];
-    link.node1 = agentNode;
-    link.node2 = gateway;
-    // Check if there is a link between the agent and the gateway nodes
-    for (let j = 0; j < graph.length; ++j) {
-      let current = graph[j];
-      if (link.equals(current)) {
-        link.slice();
-        graph.splice(j, 1);
-        return;
-      } // if
-    } // for
-  } // for
-  blockFirstLink();
-} // blockAgent()
-
-function blockFirstLink() {
-  graph[0].slice();
-  graph.splice(0, 1);
+  // the indices of the nodes you wish to sever the link between
+  console.log(`${agentNodeId} ${secondNodeId}`);
 }

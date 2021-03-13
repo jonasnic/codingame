@@ -9,7 +9,7 @@ def bfs(
 ) -> Tuple[Optional[Dict[int, int]], Optional[int]]:
     visited = set()
     queue: Deque[int] = deque()
-    came_from: Dict[int, int] = {}  # node_id => parent node id on the shortest path
+    came_from: Dict[int, int] = {}  # node id => parent node id on the shortest path
     queue.append(agent_node_id)
     visited.add(agent_node_id)
 
@@ -26,7 +26,7 @@ def bfs(
     return (None, None)
 
 
-def reconstruct_path(graph: Dict[int, Set[int]], came_from: Dict[int, int], neighbor_id: int) -> List[int]:
+def reconstruct_path(came_from: Dict[int, int], neighbor_id: int) -> List[int]:
     current_id: int = neighbor_id
     stack: List[int] = []
 
@@ -39,7 +39,7 @@ def reconstruct_path(graph: Dict[int, Set[int]], came_from: Dict[int, int], neig
 
 if __name__ == "__main__":
     # read game input
-    graph: Dict[int, Set[int]] = {}  # node_id => links
+    graph: Dict[int, Set[int]] = {}  # node id => links
     gateways: Set[int] = set()
     nb_nodes, nb_links, nb_gateways = map(int, input().split())
     for i in range(nb_links):
@@ -59,7 +59,7 @@ if __name__ == "__main__":
         agent_node_id = int(input())  # node id on which the Skynet agent is located
         came_from, neighbor_id = bfs(graph, gateways, agent_node_id)
         if came_from is not None and neighbor_id is not None:
-            path: List[int] = reconstruct_path(graph, came_from, neighbor_id)
+            path: List[int] = reconstruct_path(came_from, neighbor_id)
             second_node_id = path[-2]
             graph[agent_node_id].remove(second_node_id)
             graph[second_node_id].remove(agent_node_id)

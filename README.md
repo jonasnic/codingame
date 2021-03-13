@@ -29,7 +29,7 @@ Note: A "&starf;" next to the solution means this is my personal favorite soluti
 | :---: | :------: | :------: |
 | Shadows of the Knight 1 | [Python](./puzzles/python3/shadows_knight1.py), [Kotlin](./puzzles/kotlin/src/shadows-knight1.kt), [JavaScript](./puzzles/js/shadows-knight1.js), [TypeScript](./puzzles/ts/shadows-knight1/shadows-knight1.ts), [C++](./puzzles/cpp/shadows-knight1.cpp), [Ruby](./puzzles/ruby/shadows-knight1) &starf; | Binary Search, 2D Arrays |
 | There is no Spoon  1 | [Python](./puzzles/python3/there-is-no-spoon1) &starf;, [Kotlin](./puzzles/kotlin/src/there-is-no-spoon1.kt), [JavaScript](./puzzles/js/there-is-no-spoon1.js), [TypeScript](./puzzles/ts/there-is-no-spoon1/there-is-no-spoon1.ts), [C++](./puzzles/cpp/there-is-no-spoon1.cpp) | 2D Arrays |
-| **Skynet Revolution - Episode 1** | [Python](./puzzles/python3/skynet-revolution1) &starf;, [JavaScript](./puzzles/js/skynet-revolution1.js), [TypeScript](./puzzles/ts/skynet-revolution1/skynet-revolution1.ts). [C++](./puzzles/cpp/skynet-revolution1.cpp) | Graphs, BFS |
+| **Skynet Revolution - Episode 1** | [Python](./puzzles/python3/skynet-revolution1) &starf;, [JavaScript](./puzzles/js/skynet-revolution1.js), [Go](./puzzles/go/skynet-revolution1.go) | Graphs, BFS |
 | Don't Panic 1 | [Python](./puzzles/python3/dont_panic1.py) &starf;, [Kotlin](./puzzles/kotlin/src/dont-panic1.kt), [TypeScript](./puzzles/ts/dont-panic1/dont-panic1.ts) | Conditions |
 | **War** | [Python](./puzzles/python3/war) &starf;, [Kotlin](./puzzles/kotlin/src/war.kt), [TypeScript](./puzzles/ts/war/war.ts), [C++](./puzzles/cpp/war.cpp) | Queues, Card Games |
 | Stock Exchange Losses | [Python](./puzzles/python3/stock_exchange.py) &starf; | Conditions, Loops |
